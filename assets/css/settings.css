@@ -1,0 +1,77 @@
+@import url(root.css);
+*{
+    box-sizing: border-box;
+}
+body{
+    background: var(--grey-accent);
+}
+.side-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    background: var(--white-clr);
+}
+.nav-head{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.link-set {
+    display: grid;
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 10px;
+    text-align: justify;
+}
+
+.side-link {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    word-spacing: 20px;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 350ms;
+}
+.side-link:hover{
+    border: 1px solid black;
+    background: #e0d2e5da;
+}
+
+.active{
+    color: var(--accent-clr);
+    background: #e0d2e5da;
+}
+
+.icon {
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.link {
+    width: 75%;
+    text-align: start;
+    font-size: 20px;
+}
+.user-detail{
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    padding: 10px;
+}
+.username{
+    width: 50%;
+    position: absolute;
+    right: 3%;
+    top: 0;
+    font-size: 20px;
+}

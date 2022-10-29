@@ -4,14 +4,14 @@ session_start();
 $myacc = $_SESSION['Account'];
 $Password = $_SESSION['Password'];
 $Name = $_SESSION['Name'];
+
 $myamount;
-$Address;
 $email;
+
 $FetchMain = "SELECT * FROM main WHERE `main`.`Account_number` = $myacc;";
 $FetchMainResult = mysqli_query($con, $FetchMain);
 while ($data = mysqli_fetch_assoc($FetchMainResult)) {
     $myamount = $data['Amount'];
-    $Address = $data['Address'];
     $email = $data['Email'];
 }
 
@@ -32,14 +32,12 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 
     <!-- Css -->
     <link rel="stylesheet" href="../../css/root.css">
-    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/media.css">
     <link rel="stylesheet" href="../../css/settings.css">
 
 </head>
 
 <body id="Home">
-    <button id="topbtn" class="up-btn"><i class="fa fa-arrow-up"></i></button>
     <dialog id="logoutform">
         <div class="login-form">
             <h1>Are You Sure?? You Want to Log Out</h1>
@@ -52,7 +50,42 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
         </div>
     </dialog>
 
+    <nav class="side-nav">
+        <div class="nav-head">
+            <h1> <span class="fa fa-bank"></span><span>Web Wallet</span></h1>
+        </div>
+        <div class="link-set">
+            <a href="" class="side-link">
+                <span class=" icon fa fa-home"></span> <span class="link">Home</span>
+            </a>
+            <a href="" class="side-link">
+                <span class=" icon fa fa-money-bill-transfer"></span> <span class="link">Transfer</span>
+            </a>
+            <a href="" class="side-link">
+                <span class=" icon fa fa-cash-register"></span> <span class="link">Balance</span>
+            </a>
+            <a href="" class="side-link">
+                <span class=" icon fa fa-dollar"></span> <span class="link">Loan</span>
+            </a>
+            <a href="" class="side-link active">
+                <span class=" icon fa fa-gear active"></span> <span class="link">Settings</span>
+            </a>
+        </div>
+
+        <div class="user-detail">
+            <div class="user-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="username">
+                <?php echo $Name; ?>
+            </div>
+        </div>
+
+    </nav>
+
     <main>
+
+
 
     </main>
 </body>
