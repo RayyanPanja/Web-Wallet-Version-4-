@@ -90,8 +90,10 @@ $Name = $_SESSION['Name'];
             </div>
 
             <div class="loan-container">
-                <div class="cancle-app">
-                    <form action="delete.php" method="post"><button type="submit">Cancle Application</button></form>
+                <div >
+                    <form action="delete.php" method="post">
+                        <button type="submit" class="cancle-app">Cancle Application</button>
+                    </form>
                 </div>
                 <h1>Personal Info</h1>
                 <form action="processor/proc2.php" method="post">

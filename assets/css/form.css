@@ -161,3 +161,15 @@
     right: 10%;
     bottom: -5%;
 }
+.loan-container h1{
+    font-size: 26px ;
+}
+.cancle-app{
+    padding: 10px;
+    font-size: 20px;
+    border: #4d4198 1px solid;
+    border-radius: 25px;
+    background: black;
+    box-shadow: 0 0 10px 0 crimson;
+    color: #4d4198;
+}
