@@ -4,7 +4,8 @@ session_start();
 $myacc = $_SESSION['Account'];
 $Password = $_SESSION['Password'];
 $Name = $_SESSION['Name'];
-
+strlen($Name);
+$new = str_split($Name,5);
 $myamount;
 $email;
 
@@ -73,17 +74,19 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
         </div>
 
         <div class="user-detail">
-            <div class="user-icon">
-                <i class="fas fa-user"></i>
-            </div>
+            <i class="fa fa-user"></i>
             <div class="username">
                 <?php echo $Name; ?>
             </div>
         </div>
-
     </nav>
 
-    <main>
+    <main id="dashboard">
+        <div class="hello">
+            <h1>dashboard</h1>
+            <p>Welcome Back!! <?php echo $new[1].$new[2]; ?></p>
+        </div>
+
 
 
 

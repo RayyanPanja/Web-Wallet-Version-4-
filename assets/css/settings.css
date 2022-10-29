@@ -4,6 +4,7 @@
 }
 body{
     background: var(--grey-accent);
+    overflow: hidden;
 }
 .side-nav {
     position: fixed;
@@ -12,6 +13,7 @@ body{
     width: 20%;
     height: 100vh;
     background: var(--white-clr);
+    z-index: 999;
 }
 .nav-head{
     display: flex;
@@ -74,4 +76,11 @@ body{
     right: 3%;
     top: 0;
     font-size: 20px;
+}
+#dashboard{
+    position: relative;
+    margin-left: 22%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
 }
