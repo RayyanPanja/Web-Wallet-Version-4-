@@ -217,3 +217,51 @@
     border-radius: 100%;
     background-color: lime;
 }
+
+.package-name,
+.package-amount {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.package-amount {
+    top: 50%;
+}
+
+.package-sponsor {
+    position: absolute;
+    top: 0;
+    left: 2%;
+}
+
+.package-key,
+.user-set {
+    position: absolute;
+    bottom: 20px;
+    font-size: 20px;
+}
+.user-set{
+    right: 5%;
+}
+.get-set{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.get-set input{
+    font: 20px;
+    padding: 5px 10px;
+    background: #202020;
+    color: lime;
+    word-spacing: 10px;
+}
+.package-btn{
+    padding: 0 10px;
+    font-size: 20px;
+}
