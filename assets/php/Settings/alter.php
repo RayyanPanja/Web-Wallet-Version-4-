@@ -102,6 +102,26 @@ while ($data = mysqli_fetch_assoc($result3)) {
             </div>
         </div>
     </nav>
+    <section>
+        <dialog class="change-box" id="name-box">
+            <h1>Change Name</h1>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-lab">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col-inp">
+                        <input type="text" name="name" id="name" placeholder="Name..." class="input">
+                    </div>
+                    <div class="box-btn-pos">
+                        <button type="submit" class="box-btn">Set</button>
+                    </div>
+                </div>
+            </form>
+
+        </dialog>
+    </section>
+
 
     <main id="dashboard">
         <section class="top-sec">
@@ -114,22 +134,21 @@ while ($data = mysqli_fetch_assoc($result3)) {
         <section class="panel">
             <div class="grid-3">
                 <div class="btn-holder">
-                    <button class="dope-btn" id="toggle-name-btn" >Change Name</button>
+                    <button class="dope-btn" id="toggle-name-btn">Change Name</button>
                 </div>
                 <div class="btn-holder">
-                    <button class="dope-btn" id="toggle-email-btn" >Change Email</button>
+                    <button class="dope-btn" id="toggle-email-btn">Change Email</button>
                 </div>
                 <div class="btn-holder">
-                    <button class="dope-btn" id="toggle-contact-btn" >Change Contact</button>
+                    <button class="dope-btn" id="toggle-contact-btn">Change Contact</button>
                 </div>
                 <div class="btn-holder">
-                    <button class="dope-btn" id="toggle-contact-btn" >Change Contact</button>
+                    <button class="dope-btn" id="toggle-contact-btn">Change Contact</button>
                 </div>
 
             </div>
 
         </section>
-
     </main>
 </body>
 
