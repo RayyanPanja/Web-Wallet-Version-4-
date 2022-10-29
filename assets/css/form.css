@@ -1,0 +1,147 @@
+@import url(root.css);
+
+.step-container {
+    position: absolute;
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    padding: 10px;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #c409f3;
+    font-size: 20px;
+    font-weight: 900;
+    border: 2px solid var(--accent-clr);
+}
+
+.steps::after {
+    content: '';
+    position: absolute;
+    width: 23px;
+    border: 2px solid var(--accent-clr);
+    right: -29px;
+    background: var(--accent-clr);
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 2px double #31ff1ed2;
+    box-shadow: 0 0 10px 3px #640663e6;
+}
+
+#loginform,
+#logoutform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px;
+    width: 25%;
+    height: 60vh;
+
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.login-btn-set {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    width: 45%;
+    padding: 5px;
+    font-size: 20px;
+    background: transparent;
+    transition: all 500ms;
+}
+
+.submit:hover {
+    background-color: lightseagreen;
+}
+
+.cancle:hover {
+    background-color: crimson;
+}
+
+.register-form {
+    margin: auto;
+    margin-top: 5%;
+    width: 45%;
+    height: 50vh;
+    padding: 10px;
+    background: var(--white-clr);
+}
+
+.register-btn-set {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10%;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.register-btn {
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 500ms;
+}
+
+.account {
+    width: 100%;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.next {
+    background: slateblue;
+    color: white;
+}
+
+.next:hover {
+    background-color: #4d4198;
+}
+
+.transfer-form {
+    width: 50%;
+    height: fit-content;
+    border: 1px solid #4d4198;
+    margin: auto;
+}
+
+.transfer-details {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid cadetblue;
+}
+.detail{
+    padding: 10px;
+}
+.value{
+    border: 2px dashed crimson;
+    padding: 5px;
+}

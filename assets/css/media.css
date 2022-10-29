@@ -1,0 +1,155 @@
+/* For Smartphones */
+@media screen and (max-width:660px) {
+    section {
+        width: 100%;
+        height: fit-content;
+        padding-top: 20%;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    .navbar {
+        padding: 30px;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .login-btn,
+    .logout-btn {
+        display: none;
+    }
+
+    .side-nav .login-btn,
+    .side-nav .logout-btn {
+        display: block;
+    }
+
+    .side-nav {
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+
+    }
+
+    .footer-nav {
+        margin-top: 10%;
+    }
+
+}
+
+@media screen and (max-width:660px) {
+    .side-para {
+        width: 100%;
+    }
+
+    .para {
+        width: 100%;
+    }
+
+    .side-para-img {
+        display: none;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .profile {
+        width: 100px;
+        height: 100px;
+    }
+
+    .scroll-x {
+        overflow-x: scroll;
+    }
+
+    .card-wrap {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flex {
+        display: grid;
+    }
+}
+
+@media screen and (max-width:660px) {
+
+    #loginform,
+    #logoutform {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: none;
+        top: none;
+    }
+
+    .transfer-form {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .keyboard {
+        width: 100%;
+    }
+
+    .key {
+        width: 100%;
+    }
+
+    .receipt {
+        width: 100%;
+    }
+
+    .tick {
+        left: 15%;
+    }
+
+    .errorcode {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:660px) {
+    .transactions {
+        position: absolute;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .search-bar {
+        position: absolute;
+        right: 5%;
+        top: 20%;
+        display: flex;
+        gap: 0;
+        padding: 5px;
+    }
+
+    .balance {
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+    .title{
+        top: 2%;
+    }
+    .title *{
+        color: black;
+    }
+
+}

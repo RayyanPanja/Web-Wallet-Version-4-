@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Wallet</title>
+    <!-- Clash Display Fonts  -->
+    <link href="http://fonts.cdnfonts.com/css/clash-display" rel="stylesheet">
+
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="assets/icons/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+
+</head>
+
+<body id="Home">
+    <button id="topbtn" class="up-btn"><i class="fa fa-arrow-up"></i></button>
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <h1>Web Wallet</h1>
+        </div>
+        <a href="#Home" class="link">Home</a>
+        <a href="#About" class="link">About Us</a>
+        <a href="#Service" class="link">Services</a>
+        <a href="#Home" class="link">Registration</a>
+        <button type="submit" class="login-btn" id="login-btn">Login</button>
+
+        <a href="javascript:void(0)" class="icon" id="toggle">
+            <span class="bars"></span>
+        </a>
+    </nav>
+
+    <dialog id="sidenav">
+        <nav class="side-nav">
+            <button id="CloseSideNav" class="X-btn">X</button>
+            <div class="side-link-set">
+                <a href="#Home" class="side-link">Home</a>
+                <a href="#About" class="side-link">About Us</a>
+                <a href="#Service" class="side-link">Services</a>
+                <a href="#Home" class="side-link">Registration</a>
+            </div>
+            <button type="submit" class="login-btn" id="side-login-btn">Login</button>
+            <p style="position:absolute; bottom:20%; padding: 10px;">Double Click anywhere to Exit Side menu</p>
+        </nav>
+    </dialog>
+
+
+    <footer id="footer">
+        <div style="position: absolute; right: 10%;">
+            <p>&copy;CopyRight Owned By Team Web Wallet</p>
+        </div>
+
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Service">Services</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+    </footer>
+</body>
+<script src="assets/js/main.js"></script>
+
+</html>

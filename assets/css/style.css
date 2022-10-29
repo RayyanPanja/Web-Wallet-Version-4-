@@ -1,0 +1,216 @@
+@import url(root.css);
+
+.hero {
+    position: relative;
+    padding: 10px;
+    padding-top: 5%;
+    width: 100%;
+    height: 98vh;
+    overflow: hidden;
+    background: #000;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.25;
+}
+
+.hero-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+.hero-logo h1,
+.hero-logo p {
+    color: #efefefea;
+}
+
+/* About Us  */
+.details {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    height: 30vh;
+}
+
+/* Profile Cards */
+.card-wrap {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid purple;
+    background: #f4f1f1;
+}
+
+.card-wrap * {
+    color: #000;
+
+}
+
+.profile,
+.profile img {
+    border-radius: 75px 0 75px 0;
+    transition: all 1000ms;
+}
+
+.profile {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    border: 2px double purple;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 75px 0 75px 0;
+    transition: all 1000ms;
+}
+
+.profile:hover,
+.profile img:hover {
+    border-radius: 0 75px 0 75px;
+}
+
+
+.card-wrap .name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card-wrap .skill {
+    position: absolute;
+    bottom: 5%;
+}
+
+.side-para {
+    width: 50%;
+    padding: 10px;
+    height: 100vh;
+}
+
+.para {
+    width: 70%;
+    padding: 10px;
+}
+
+.side-para-img {
+    display: block;
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    height: 30vh;
+    border-radius: 20px;
+    background: black;
+    transform: rotate(-30deg);
+}
+
+.side-para-img img {
+    width: 100%;
+    height: 70vh;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 2px grey,
+        0 0 30px 2px #383737,
+        0 0 40px 2px #000;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.balance{
+    display: flex;
+    gap: 10px;
+}
+.search-bar {
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    display: flex;
+    gap: 0;
+    padding: 5px;
+}
+
+.small-input {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.search-btn {
+    font-size: 18px;
+}
+.number{
+    width: fit-content;
+    background: #54545494;
+    border: 2px dotted black;
+}
+.transactions{
+    position: relative;
+    overflow: scroll;
+    margin-top: 3%;
+    padding: 10px;
+    padding-top: 3%;
+    width: 100%;
+    height: 50vh;
+    background: #383737;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+.title{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.title *{
+    font-size: 30px;
+    color: #f4f1f1;
+}
+
+.tra-card{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    padding: 10px;
+    background: #efefefea;
+    font-size: 20px;
+}
+.amount{
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.date{
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+}
+.names{
+    position: absolute;
+    display: grid;
+    bottom: 10%;
+    left: 5%;
+
+}
+.id{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}

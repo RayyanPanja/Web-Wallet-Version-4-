@@ -1,0 +1,294 @@
+/* Root/Common/Miscs Css Stylings */
+@import url('http://fonts.cdnfonts.com/css/clash-display');
+
+:root {
+    --primary-clr: #FCFCFC;
+    --secondary-clr: #88ff00;
+    --accent-clr: #8910ad;
+    --grey-accent: #474646;
+    --light-clr: #e5e4e4ea;
+    --white-clr: #ffffff;
+    --font-clr: #100202;
+    --font-family: 'Clash Display', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-clr);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--font-clr);
+    font-family: var(--font-family);
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+section {
+    position: relative;
+    padding-top: 5%;
+    background: var(--light-clr);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.version p {
+    color: var(--light-clr);
+}
+
+.grid-3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 10px;
+}
+
+.no-gap {
+    gap: 0;
+}
+
+.small-gap {
+    gap: 3px;
+}
+
+.flex {
+    display: flex;
+    gap: 5px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.greet {
+    position: relative;
+    display: block;
+    padding: 5px;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.greet::after {
+    content: '';
+    transition: all 500ms;
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(33deg, orangered, lime);
+    bottom: -10px;
+    left: -25%;
+}
+
+.greet:hover::after {
+    width: 150%;
+}
+
+.up-btn {
+    transition: all 500ms;
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+    padding: 20px;
+    border: 0;
+    background: #c409f3;
+    font-size: 20px;
+    font-weight: 900;
+    z-index: 999;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #000000;
+}
+
+.up-btn:hover {
+    background: #ce3ff1;
+    box-shadow: 0 0 20px 0 #000000;
+}
+
+.X-btn {
+    position: absolute;
+    right: 10%;
+    font-size: 25px;
+    border: 0;
+    padding: 5px;
+    background: transparent;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+    padding: 10px;
+    display: flex;
+}
+
+.row::after {
+    content: '';
+    float: left;
+    display: table;
+    clear: both;
+}
+
+.col-lab {
+    padding: 5px;
+    width: 100%;
+}
+
+.col-inp {
+    padding: 5px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.rotate:hover {
+    border-radius: 100%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.keyboard {
+    width: 100%;
+}
+
+.key {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    transition: all 500ms;
+    border: 2px double teal;
+}
+
+.key[type="submit"] {
+    background: seagreen;
+}
+
+.key[type="submit"]:hover {
+    background-color: teal;
+}
+
+.key[type="reset"] {
+    background: crimson;
+}
+
+.key[type="reset"]:hover {
+    background: red;
+}
+
+.key:hover {
+    background: #c6c4c6;
+}
+
+.errorcode {
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: black;
+    box-shadow: 0 0 20px 2px crimson;
+    font-size: 25px;
+    color: red;
+    text-align: center;
+}
+
+.error-btn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px;
+    font-size: 25px;
+    border: 3px double red;
+    background-color: #000000;
+    color: #c6c4c6;
+    border-radius: 75px;
+    transition: all 250ms;
+}
+
+.error-btn:hover {
+    box-shadow: 0 0 20px 0 crimson, 0 0 30px 0 red, 0 0 40px 0 black;
+}
+
+.success-text {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    font-size: 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+}
+
+.tick {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+
+.receipt {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+}
+
+.receipt * {
+    color: #e5e4e4ea;
+}
+
+.receipt table,
+th,
+td {
+    padding: 5px;
+    border: 1px solid #e5e4e4ea;
+}
+
+table {
+    width: 100%;
+}

@@ -1,0 +1,172 @@
+@import url(root.css);
+
+.navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-clr);
+    overflow: hidden;
+    border-bottom: 2px solid var(--grey-accent);
+    z-index: 999;
+}
+
+.link {
+    position: relative;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.link::after {
+    content: '';
+    transition: all 500ms;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+
+.link:hover::after {
+    width: 100%;
+    background-color: var(--accent-clr);
+}
+
+.nav-logo {
+    position: absolute;
+    left: 2%;
+    top: 0;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.icon {
+    position: absolute;
+    right: 10%;
+    padding: 15px;
+    z-index: 9999;
+}
+
+.bars {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: purple;
+    z-index: 9999;
+    transition: all 1000ms;
+}
+.bars::before,
+.bars::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background: purple;
+    transition: all 900ms;
+}
+
+.bars::before {
+    top: -8px;
+}
+
+.bars::after {
+    bottom: -8px;
+}
+
+.bars:hover::before {
+    transform: rotate(360deg);
+}
+
+.bars:hover::after {
+    transform: rotate(-270deg);
+}
+
+/* Side Nav */
+.side-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    background: #efefef;
+    z-index: 9999;
+    border-right: 2px solid purple;
+}
+
+.side-link-set {
+    margin-top: 15%;
+}
+
+.side-link {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 230ms;
+}
+.active-side-link {
+    border: 2px double darkturquoise;
+
+}
+.side-link:hover {
+    border: 2px solid darkorchid;
+}
+
+.login-btn,
+.logout-btn {
+    position: absolute;
+    top: 5px;
+    right: 20%;
+    padding: 5px 20px;
+    font-size: 20px;
+    background-color: transparent;
+    transition: all 500ms;
+}
+
+.login-btn {
+    border: 5px double dodgerblue;
+}
+
+.login-btn:hover {
+    background: black;
+    color: var(--secondary-clr);
+}
+.logout-btn {
+    border: 5px double crimson;
+}
+.logout-btn:hover {
+    background: black;
+    box-shadow: 0 0 10px 0 crimson;
+    color: var(--secondary-clr);
+}
+
+.side-nav .login-btn,.side-nav .logout-btn {
+    position: relative;
+    margin-top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Footer NAV */
+.footer-nav {
+    display: block;
+    width: 10%;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav a {
+    text-decoration: none;
+}
