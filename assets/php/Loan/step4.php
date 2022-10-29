@@ -136,7 +136,7 @@ $Name = $_SESSION['Name'];
                         <?php }
                     } else { ?>
                         <div class="errorcode">
-                            <i class="fa fa-skull-crossbones" style="color:#000;"></i> No Packages Available At Moment
+                            <i class="fa fa-skull" style="color:#FFF;"></i> No Packages Available At Moment
                         </div>
                     <?php } ?>
 

@@ -138,16 +138,18 @@
     padding: 10px;
     border: 2px solid cadetblue;
 }
-.detail{
+
+.detail {
     padding: 10px;
 }
-.value{
+
+.value {
     border: 2px dashed crimson;
     padding: 5px;
 }
 
 /* Loan */
-.loan-container{
+.loan-container {
     position: relative;
     width: 50%;
     height: 50vh;
@@ -156,20 +158,62 @@
     margin-top: 8%;
     padding: 10px;
 }
-.loan-container .register-btn-set{
+
+.loan-container .register-btn-set {
     position: absolute;
     right: 10%;
     bottom: -5%;
 }
-.loan-container h1{
-    font-size: 26px ;
+
+.loan-container h1 {
+    font-size: 26px;
 }
-.cancle-app{
+
+.cancle-app {
     padding: 10px;
     font-size: 20px;
     border: #4d4198 1px solid;
     border-radius: 25px;
     background: black;
     box-shadow: 0 0 10px 0 crimson;
-    color: #4d4198;
+    color: #EFEFEF;
+    z-index: 999;
+}
+
+.package-container {
+    width: 80%;
+    height: 50vh;
+    margin: auto;
+    margin-top: 10%;
+    border: #c409f3 2px solid;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.package-wrapper {
+    position: relative;
+    width: 99%;
+    height: 20vh;
+    padding: 15px;
+    margin: auto;
+    display: flex;
+    background: var(--white-clr);
+    gap: 20px;
+}
+
+.package-status {
+    position: absolute;
+    right: 5%;
+}
+
+.package-status::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -45%;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: lime;
 }
