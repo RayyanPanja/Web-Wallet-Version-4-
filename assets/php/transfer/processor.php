@@ -106,8 +106,8 @@
                         if ($UResult2) {
                             // Insert into Transaction...
                             $receiptID = rand(00000, 999999);
-                            $insert = "INSERT INTO `transaction` (`Receipt_No`, `From_Acc`, `To_Acc`, `Amount`, `Date`, `Receiver`, `Sender`) 
-                            VALUES ($receiptID, $myacc, $hisAcc, $AmountSent, current_timestamp(), '$hisName', '$myname');";
+                            $insert = "INSERT INTO `transaction` (`Receipt_No`, `From_Acc`, `To_Acc`, `Amount`, `Date`,`Time`, `Receiver`, `Sender`) 
+                            VALUES ($receiptID, $myacc, $hisAcc, $AmountSent, current_timestamp(), current_timestamp(), '$hisName', '$myname');";
                             $iresult = mysqli_query($con, $insert);
                             if ($iresult) {
                                 header("Location: successfull.php");

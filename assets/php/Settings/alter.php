@@ -87,11 +87,11 @@ while ($data = mysqli_fetch_assoc($result3)) {
             <a href="../Loan/step1.php" class="side-link">
                 <span class=" icon fa fa-dollar"></span> <span class="link">Loan</span>
             </a>
-            <a href="dashboard.php" class="side-link active">
-                <span class=" icon fa fa-gear active"></span> <span class="link">Dashboard</span>
+            <a href="dashboard.php" class="side-link">
+                <span class=" icon fa fa-gear"></span> <span class="link">Settings</span>
             </a>
-            <a href="alter.php" class="side-link">
-                <span class=" icon fa fa-gear"></span> <span class="link">Change Settings</span>
+            <a href="alter.php" class="side-link active">
+                <span class=" icon fa fa-gear active"></span> <span class="link">Change Settings</span>
             </a>
         </div>
 
@@ -106,61 +106,26 @@ while ($data = mysqli_fetch_assoc($result3)) {
     <main id="dashboard">
         <section class="top-sec">
             <div class="hello">
-                <h1>Dashboard</h1>
+                <h1>Change Settings</h1>
                 <p>Welcome Back!! <?php echo $new[0] . $new[1]; ?></p>
             </div>
         </section>
-        <section class="content">
 
-            <div class="spent-card">
-                <h2>Money Spent This Month</h2>
-                <h3 class="amount spent"><?php echo $spent; ?>/-</h3>
-                <?php
-                if ($spent > 1000) { ?>
-                    <p class="alert">You Used Quite A Lot This Month!!</p>
-                <?php }
-                ?>
-            </div>
-            <div class="spent-card">
-                <h2>Money Earned This Month</h2>
-                <h3 class="amount earn"><?php echo $earn; ?>/-</h3>
-                <?php
-                if ($earn > 1000) { ?>
-                    <p class="alert">Keep It Up!!</p>
-                <?php }
-                ?>
+        <section class="panel">
+            <div class="grid-3">
+                <div class="btn-holder">
+                    <button class="dope-btn" id="toggle-name-btn" >Change Name</button>
+                </div>
+                <div class="btn-holder">
+                    <button class="dope-btn" id="toggle-email-btn" >Change Email</button>
+                </div>
+                <div class="btn-holder">
+                    <button class="dope-btn" id="toggle-contact-btn" >Change Contact</button>
+                </div>
 
-
-            </div>
-            <div class="expense-card">
-                <h1>Expense</h1>
-                <table>
-                    <?php
-                    $hisname;
-                    $amount;
-                    $Fetch4 = "SELECT * FROM `transaction` WHERE `From_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last';";
-                    $result4 = mysqli_query($con, $Fetch4);
-                    while ($data = mysqli_fetch_assoc($result4)) { ?>
-                        <tr>
-                            <th><?php echo $data['Receiver'] ;?></th>
-                            <td><?php echo $data['Amount'] ;?>/-</td>
-                        </tr>
-
-                    <?php }  ?>
-                </table>
-            </div>
-
-            <div class="change">
-                <h1>Change Settings</h1>
-                <a href="alter.php">
-                    <i class="fa fa-gear rotate"></i>
-                </a>
             </div>
 
         </section>
-
-
-
 
     </main>
 </body>
