@@ -231,6 +231,11 @@ body {
     font-size: 23px;
     border: 2px double dodgerblue;
     background: #00ff80;
+    transition: all 500ms;
+}
+.dope-btn:hover{
+    background: #000;
+    color: red;
 }
 .change-box{
     position: absolute;
