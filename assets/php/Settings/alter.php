@@ -122,6 +122,9 @@ while ($data = mysqli_fetch_assoc($result3)) {
                 <div class="btn-holder">
                     <button class="dope-btn" id="toggle-contact-btn" >Change Contact</button>
                 </div>
+                <div class="btn-holder">
+                    <button class="dope-btn" id="toggle-contact-btn" >Change Contact</button>
+                </div>
 
             </div>
 
