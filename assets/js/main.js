@@ -1,7 +1,5 @@
 console.clear();
-console.log("Javascript Loaded");
 let windowsize = window.screen.width;
-console.log(windowsize);
 // Scroll To Top
 const TopBtn = document.querySelector('#topbtn');
 TopBtn.style.display = "none";

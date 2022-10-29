@@ -189,6 +189,7 @@
     overflow-y: scroll;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
 }
 
 .package-wrapper {
@@ -197,9 +198,8 @@
     height: 20vh;
     padding: 15px;
     margin: auto;
-    display: flex;
+    margin-bottom: 25px;
     background: var(--white-clr);
-    gap: 20px;
 }
 
 .package-status {
@@ -264,4 +264,10 @@
 .package-btn{
     padding: 0 10px;
     font-size: 20px;
+}
+.terms{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%,-50%);
 }

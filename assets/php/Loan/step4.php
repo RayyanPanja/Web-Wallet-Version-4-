@@ -41,7 +41,6 @@ $Name = $_SESSION['Name'];
         <a href="step1.php" class="link">Apply For Loan</a>
         <a href="../Balance/balance.php" class="link">Balance</a>
         <a href="../php/Settings/" class="link"><i class="fas fa-gear rotate"></i></a>
-        <button type="submit" class="logout-btn" id="logout-btn">Logout</button>
 
         <a href="javascript:void(0)" class="icon" id="toggle">
             <span class="bars"></span>
@@ -60,23 +59,13 @@ $Name = $_SESSION['Name'];
                 <a href="../Balance/balance.php" class="side-link">Balance</a>
                 <a href="../php/Settings/" class="side-link"><i class="fas fa-gear  rotate"></i></a>
             </div>
-            <button type="submit" class="logout-btn" id="side-logout-btn">Logout</button>
             <p style="position:absolute; bottom:20%; padding: 10px;">Double Click anywhere to Exit Side menu</p>
         </nav>
     </dialog>
 
-    <dialog id="logoutform">
-        <div class="login-form">
-            <h1>Are You Sure?? You Want to Log Out</h1>
-            <form action="../logout.php" method="post">
-                <div class="login-btn-set">
-                    <button type="reset" id="CloseLogout" class="btn submit">Cancle</button>
-                    <button type="submit" class="btn cancle">Logout</button>
-                </div>
-            </form>
-        </div>
+    <dialog id="termbox" class="termsdlg">
+        <h1>Terms & Conditions</h1>
     </dialog>
-
 
     <main>
         <section>
@@ -104,6 +93,13 @@ $Name = $_SESSION['Name'];
 
                             <form action="processor/proc4.php" method="post">
                                 <div class="package-wrapper">
+                                    <div class="terms">
+                                        <span id="terms">
+                                            <input type="checkbox" required>
+                                            Terms & Conditions
+                                        </span>
+
+                                    </div>
                                     <div class="package-status">
                                         <?php echo $data['Status']; ?>
                                     </div>
@@ -163,6 +159,6 @@ $Name = $_SESSION['Name'];
     </footer>
 </body>
 <script src="../../js/main.js"></script>
-<script src="../../js/log.js"></script>
+<script src="../../js/terms.js"></script>
 
 </html>

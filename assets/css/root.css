@@ -292,3 +292,9 @@ td {
 table {
     width: 100%;
 }
+.termsdlg{
+    width: 0;
+    height: 0;
+    padding: 10px;
+    margin: auto;
+}

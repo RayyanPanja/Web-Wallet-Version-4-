@@ -42,8 +42,6 @@ $Name = $_SESSION['Name'];
         <a href="step1.php" class="link">Apply For Loan</a>
         <a href="../Balance/balance.php" class="link">Balance</a>
         <a href="../Settings/dashboard.php" class="link"><i class="fas fa-gear rotate"></i></a>
-        <button type="submit" class="logout-btn" id="logout-btn">Logout</button>
-
         <a href="javascript:void(0)" class="icon" id="toggle">
             <span class="bars"></span>
         </a>
@@ -67,17 +65,6 @@ $Name = $_SESSION['Name'];
     </dialog>
 
 
-    <dialog id="logoutform">
-        <div class="login-form">
-            <h1>Are You Sure?? You Want to Log Out</h1>
-            <form action="../logout.php" method="post">
-                <div class="login-btn-set">
-                    <button type="reset" id="CloseLogout" class="btn submit">Cancle</button>
-                    <button type="submit" class="btn cancle">Logout</button>
-                </div>
-            </form>
-        </div>
-    </dialog>
 
 
     <main>
@@ -90,7 +77,7 @@ $Name = $_SESSION['Name'];
             </div>
 
             <div class="loan-container">
-                <div >
+                <div>
                     <form action="delete.php" method="post">
                         <button type="submit" class="cancle-app">Cancle Application</button>
                     </form>
