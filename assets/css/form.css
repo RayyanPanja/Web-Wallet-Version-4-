@@ -145,3 +145,19 @@
     border: 2px dashed crimson;
     padding: 5px;
 }
+
+/* Loan */
+.loan-container{
+    position: relative;
+    width: 50%;
+    height: 50vh;
+    background-color: var(--white-clr);
+    margin: auto;
+    margin-top: 8%;
+    padding: 10px;
+}
+.loan-container .register-btn-set{
+    position: absolute;
+    right: 10%;
+    bottom: -5%;
+}

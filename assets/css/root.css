@@ -1,6 +1,6 @@
 /* Root/Common/Miscs Css Stylings */
 @import url('http://fonts.cdnfonts.com/css/clash-display');
-
+@import url(fonts.css);
 :root {
     --primary-clr: #FCFCFC;
     --secondary-clr: #88ff00;

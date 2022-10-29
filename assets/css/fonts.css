@@ -1,0 +1,13 @@
+@font-face {
+    font-family: clash display;
+    font-style: normal;
+    font-weight: 200;
+    src: local('Clash Display'), url(ClashDisplaySemibold.woff) format('woff')
+}
+
+@font-face {
+    font-family: clash display;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Clash Display'), url(ClashDisplayBold.woff) format('woff')
+}
