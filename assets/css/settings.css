@@ -1,11 +1,28 @@
-@import url(root.css);
-*{
+@import url('http://fonts.cdnfonts.com/css/clash-display');
+@import url(fonts.css);
+
+:root {
+    --primary-clr: #FCFCFC;
+    --secondary-clr: #88ff00;
+    --accent-clr: #1e14d7;
+    --grey-accent: #dddddda9;
+    --light-clr: #e5e4e4ea;
+    --white-clr: #ffffff;
+    --font-clr: #100202;
+    --font-family: 'Clash Display', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: var(--grey-accent);
     overflow: hidden;
 }
+
 .side-nav {
     position: fixed;
     left: 0;
@@ -15,7 +32,8 @@ body{
     background: var(--white-clr);
     z-index: 999;
 }
-.nav-head{
+
+.nav-head {
     display: flex;
     gap: 10px;
     width: 100%;
@@ -23,6 +41,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .link-set {
     display: grid;
     text-align: justify;
@@ -43,12 +62,13 @@ body{
     padding: 5px 15px;
     transition: all 350ms;
 }
-.side-link:hover{
+
+.side-link:hover {
     border: 1px solid black;
     background: #e0d2e5da;
 }
 
-.active{
+.active {
     color: var(--accent-clr);
     background: #e0d2e5da;
 }
@@ -64,23 +84,59 @@ body{
     text-align: start;
     font-size: 20px;
 }
-.user-detail{
+
+.user-detail {
     width: 100%;
     position: absolute;
     bottom: 10%;
     padding: 10px;
 }
-.username{
+
+.username {
     width: 50%;
     position: absolute;
     right: 3%;
     top: 0;
     font-size: 20px;
 }
-#dashboard{
+
+#dashboard {
     position: relative;
     margin-left: 22%;
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
+}
+
+.top-sec {
+    display: flex;
+    font-size: 1.3em;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+}
+
+.hello {
+    width: 25%;
+}
+
+.hello>p {
+    font-size: 20px;
+    opacity: 0.52;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.spent-card{
+    width: 100%;
+    height: 100%;
+    background: var(--primary-clr);
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px 0 black;
 }

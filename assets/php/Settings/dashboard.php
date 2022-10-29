@@ -4,8 +4,9 @@ session_start();
 $myacc = $_SESSION['Account'];
 $Password = $_SESSION['Password'];
 $Name = $_SESSION['Name'];
-strlen($Name);
-$new = str_split($Name,5);
+
+$words = str_word_count($Name);
+$new = str_split($Name, $words + $words);
 $myamount;
 $email;
 
@@ -14,6 +15,16 @@ $FetchMainResult = mysqli_query($con, $FetchMain);
 while ($data = mysqli_fetch_assoc($FetchMainResult)) {
     $myamount = $data['Amount'];
     $email = $data['Email'];
+}
+
+$first = date('Y-m-01');
+$last = date('Y-m-30');
+$spent;
+
+$Fetch2 = "SELECT `transaction`.`Amount` FROM `transaction` WHERE `Date` BETWEEN $first and $last;";
+$result = mysqli_query($con,$Fetch2);
+while($data = mysqli_fetch_assoc($result)){
+    $spent += $data['Amount'];
 }
 
 ?>
@@ -82,10 +93,20 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
     </nav>
 
     <main id="dashboard">
-        <div class="hello">
-            <h1>dashboard</h1>
-            <p>Welcome Back!! <?php echo $new[1].$new[2]; ?></p>
-        </div>
+        <section class="top-sec">
+            <div class="hello">
+                <h1>Dashboard</h1>
+                <p>Welcome Back!! <?php echo $new[0] . $new[1]; ?></p>
+            </div>
+        </section>
+        <section class="content">
+            <div class="spent-card">
+                <h2>Money Spent This Month</h2>
+                <h3 class="amount"><?php echo $spent; ?>/-</h3>
+
+            </div>
+
+        </section>
 
 
 
