@@ -78,21 +78,21 @@
     </section>
 
 
-    <footer id="footer">
-        <div style="position: absolute; right: 10%;">
-            <p>&copy;CopyRight Owned By Team Web Wallet</p>
+<footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Web Wallet</h1>
+
+            <h2>Contact</h2>
+
+            <address>
+                Noble Institute of Tech. Junagadh <br>
+                <a class="footer__btn" href="mailto:illumi2701@gmail.com">Email Us</a>
+            </address>
         </div>
 
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="../../../index.html #Home">Home</a></li>
-                <li><a href="../../../index.html #About">About</a></li>
-                <li><a href="../../../index.html #Service">Services</a></li>
-                <li><a href="step1.php">Register</a></li>
-            </ul>
-        </nav>
-        <hr>
-
+        <div class="legal">
+            <p>&copy; 2022 Web Wallet. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 <script src="../../js/main.js"></script>

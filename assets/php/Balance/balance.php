@@ -134,8 +134,8 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
                                 Date:<?php echo $data['Date']; ?>
                             </div>
                             <div class="names">
-                                <div class="receiver"><?php echo $data['Receiver'];?></div>
-                                <div class="sender"><?php echo $data['Sender'];?></div>
+                                <div class="receiver"><?php echo $data['Receiver']; ?></div>
+                                <div class="sender"><?php echo $data['Sender']; ?></div>
                             </div>
                         </div>
                     <?php }
@@ -148,20 +148,21 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 
         </section>
     </main>
-    <footer id="footer">
-        <div style="position: absolute; right: 10%;">
-            <p>&copy;CopyRight Owned By Team Web Wallet</p>
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Web Wallet</h1>
+
+            <h2>Contact</h2>
+
+            <address>
+                Noble Institute of Tech. Junagadh <br>
+                <a class="footer__btn" href="mailto:illumi2701@gmail.com">Email Us</a>
+            </address>
         </div>
 
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="../../../index.php #Home">Home</a></li>
-                <li><a href="../../../index.php #About">About</a></li>
-                <li><a href="../../../index.php #Service">Services</a></li>
-            </ul>
-        </nav>
-        <hr>
-
+        <div class="legal">
+            <p>&copy; 2022 Web Wallet. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 

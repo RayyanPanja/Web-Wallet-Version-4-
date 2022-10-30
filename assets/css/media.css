@@ -6,6 +6,12 @@
         padding-top: 20%;
     }
 
+    .footer__nav>* {
+        flex: 1;
+    }
+    .footer__addr {
+        flex: 1 0px;
+    }
 }
 
 @media screen and (max-width: 660px) {
@@ -145,10 +151,12 @@
         top: 10%;
         left: 10%;
     }
-    .title{
+
+    .title {
         top: 2%;
     }
-    .title *{
+
+    .title * {
         color: black;
     }
 
