@@ -136,17 +136,37 @@ while ($data = mysqli_fetch_assoc($result3)) {
                 <h1>Expense</h1>
                 <table>
                     <?php
-                    $hisname;
-                    $amount;
                     $Fetch4 = "SELECT * FROM `transaction` WHERE `From_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last';";
                     $result4 = mysqli_query($con, $Fetch4);
-                    while ($data = mysqli_fetch_assoc($result4)) { ?>
-                        <tr>
-                            <th><?php echo $data['Receiver'] ;?></th>
-                            <td><?php echo $data['Amount'] ;?>/-</td>
-                        </tr>
+                    if (mysqli_num_rows($result4) > 0) {
+                        while ($data = mysqli_fetch_assoc($result4)) { ?>
+                            <tr>
+                                <th><?php echo $data['Receiver']; ?></th>
+                                <td><?php echo $data['Amount']; ?>/-</td>
+                            </tr>
+                        <?php }
+                    } else { ?>
+                        <h1>No Expense</h1>
+                    <?php } ?>
+                </table>
+            </div>
 
-                    <?php }  ?>
+            <div class="expense-card">
+                <h1>Earnings</h1>
+                <table>
+                    <?php
+                    $Fetch5 = "SELECT * FROM `transaction` WHERE `To_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last';";
+                    $result5 = mysqli_query($con, $Fetch5);
+                    if (mysqli_num_rows($result5)) {
+                        while ($data = mysqli_fetch_assoc($result5)) { ?>
+                            <tr>
+                                <th><?php echo $data['Sender']; ?></th>
+                                <td><?php echo $data['Amount']; ?>/-</td>
+                            </tr>
+                        <?php }
+                    } else {  ?>
+                        <h1>No Earnings</h1>
+                    <?php } ?>
                 </table>
             </div>
 

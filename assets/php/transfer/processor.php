@@ -65,7 +65,7 @@
         $myname = $_SESSION['Name'];
 
         $myAmount;
-        
+
         $Fetch = "SELECT * FROM main WHERE `main`.`Account_number` = $myacc;";
         $Result = mysqli_query($con, $Fetch);
         while ($data = mysqli_fetch_assoc($Result)) {
@@ -76,7 +76,7 @@
         $hisAcc = $_POST['accountnumber'];
         $AmountSent = $_POST['amount'];
 
-        
+
         if (isset($hisAcc)) {
             $hisAmount;
             $hisName;
@@ -96,7 +96,7 @@
                     $hisnewamount = 0;
 
                     $mynewamount = $myAmount - $AmountSent;
-                    
+
                     $Update = "UPDATE main SET `Amount` = $mynewamount WHERE `main`.`Account_number` = $myacc;";
                     $UResult = mysqli_query($con, $Update);
                     if ($UResult) {
@@ -110,6 +110,8 @@
                             VALUES ($receiptID, $myacc, $hisAcc, $AmountSent, current_timestamp(), current_timestamp(), '$hisName', '$myname');";
                             $iresult = mysqli_query($con, $insert);
                             if ($iresult) {
+                                $_SESSION['temphisacc'] = $hisAcc;
+                                $_SESSION['tempID'] = $receiptID;
                                 header("Location: successfull.php");
                             }
                         }

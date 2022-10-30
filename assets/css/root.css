@@ -251,13 +251,14 @@ footer {
 
 .success-text {
     position: absolute;
-    width: 100%;
-    top: 45%;
+    top: 15%;
     left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     font-size: 0;
     text-align: center;
-    transform: translate(-50%, -50%);
     bottom: 0;
+    transition: all 500ms;
 }
 
 .tick {
@@ -266,6 +267,7 @@ footer {
     position: absolute;
     top: 25%;
     left: 40%;
+    transition: all 500ms;
 }
 
 .receipt {
@@ -276,6 +278,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #000000;
+    transition: all 500ms;
 }
 
 .receipt * {

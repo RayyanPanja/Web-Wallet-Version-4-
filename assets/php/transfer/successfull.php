@@ -4,19 +4,18 @@ session_start();
 $myacc = $_SESSION['Account'];
 $Password = $_SESSION['Password'];
 $Name = $_SESSION['Name'];
-
+$hisacc = $_SESSION['temphisacc'];
+$receiptID = $_SESSION['tempID'];
 $ID;
 $Amount;
-$hisacc;
 $hisname;
 
-$Fetch = "SELECT * FROM `transaction` WHERE `transaction`.`From_Acc` = $myacc ORDER BY `Date` ASC;";
+$Fetch = "SELECT * FROM `transaction` WHERE `transaction`.`From_Acc` = $myacc ORDER BY `Date` DESC;";
 $Result = mysqli_query($con, $Fetch);
 while ($data = mysqli_fetch_row($Result)) {
     $ID = $data[0];
     $Amount = $data[3];
-    $hisacc = $data[2];
-    $hisname = $data[5];
+    $hisname = $data[6];
 }
 ?>
 <!DOCTYPE html>
@@ -85,10 +84,10 @@ while ($data = mysqli_fetch_row($Result)) {
         <div class="success-text">
             <h1>
                 <?php
-                if($Name == $hisname){
+                if($myacc == $hisacc){
                     echo "Self Transfer....";
                 }else{
-                    echo "Transfer Successfull";
+                    echo "Traaaansfer Successfull";
                 }
                 ?>
             </h1>
@@ -120,8 +119,6 @@ while ($data = mysqli_fetch_row($Result)) {
                     <th>Sender</th>
                     <td><?php echo $Name; ?></td>
                 </tr>
-
-
             </table>
         </div>
 
@@ -145,7 +142,7 @@ while ($data = mysqli_fetch_row($Result)) {
     </footer>
 </body>
 <script src="../../js/main.js"></script>
-<script src="../../js/php.js"></script>
+<script src="../../js/animate.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </html>

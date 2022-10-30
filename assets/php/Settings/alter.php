@@ -73,6 +73,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 
 <dialog class="change-box" id="name-box">
     <h1>Change Name</h1>
+    <i class="fa fa-xmark close-btn" id="name-close-btn"></i>
     <form action="" method="post">
         <div class="row">
             <div class="col-lab">
@@ -86,7 +87,60 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
             </div>
         </div>
     </form>
+</dialog>
 
+<dialog class="change-box" id="name-box">
+    <h1>Change Name</h1>
+    <i class="fa fa-xmark close-btn" id="name-close-btn"></i>
+    <form action="" method="post">
+        <div class="row">
+            <div class="col-lab">
+                <label for="name">Name</label>
+            </div>
+            <div class="col-inp">
+                <input type="text" name="name" id="name" placeholder="Name..." class="input">
+            </div>
+            <div class="box-btn-pos">
+                <button type="submit" class="box-btn">Set</button>
+            </div>
+        </div>
+    </form>
+</dialog>
+
+<dialog class="change-box" id="email-box">
+    <h1>Change Email</h1>
+    <i class="fa fa-xmark close-btn" id="email-close-btn"></i>
+    <form action="" method="post">
+        <div class="row">
+            <div class="col-lab">
+                <label for="Email">Email</label>
+            </div>
+            <div class="col-inp">
+                <input type="text" name="email" id="email" placeholder="Something@this.com" class="input">
+            </div>
+            <div class="box-btn-pos">
+                <button type="submit" class="box-btn">Set</button>
+            </div>
+        </div>
+    </form>
+</dialog>
+
+<dialog class="change-box" id="contact-box">
+    <h1>Change Contact</h1>
+    <i class="fa fa-xmark close-btn" id="contact-close-btn"></i>
+    <form action="" method="post">
+        <div class="row">
+            <div class="col-lab">
+                <label for="contact">Contact</label>
+            </div>
+            <div class="col-inp">
+                <input type="tel" name="contact" id="contact" placeholder="000-000-0000" class="input">
+            </div>
+            <div class="box-btn-pos">
+                <button type="submit" class="box-btn">Set</button>
+            </div>
+        </div>
+    </form>
 </dialog>
 
 
@@ -99,15 +153,12 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
     </section>
 
     <section class="panel">
-        <div class="grid-3">
+        <div class="grid">
             <div class="btn-holder">
                 <button class="dope-btn" id="toggle-name-btn">Change Name</button>
             </div>
             <div class="btn-holder">
                 <button class="dope-btn" id="toggle-email-btn">Change Email</button>
-            </div>
-            <div class="btn-holder">
-                <button class="dope-btn" id="toggle-contact-btn">Change Contact</button>
             </div>
             <div class="btn-holder">
                 <button class="dope-btn" id="toggle-contact-btn">Change Contact</button>
@@ -121,8 +172,6 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
     </section>
 </main>
 </body>
-
-<script src="../../js/main.js"></script>
 <script src="../../js/setting.js"></script>
 
 </html>
