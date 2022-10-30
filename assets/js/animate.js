@@ -14,7 +14,7 @@ setInterval(() => {
                 receipt.style.height = 25 + "%";
             } else {
                 receipt.style.width = 25 + "%";
-                receipt.style.height = 40 + "%";
+                receipt.style.height = 30 + "%";
             }
         }, 1000);
     }, 1000);

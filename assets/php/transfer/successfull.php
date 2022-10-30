@@ -10,7 +10,7 @@ $ID;
 $Amount;
 $hisname;
 
-$Fetch = "SELECT * FROM `transaction` WHERE `transaction`.`From_Acc` = $myacc ORDER BY `Date` DESC;";
+$Fetch = "SELECT * FROM `transaction` WHERE `transaction`.`Receipt_No` = $receiptID;";
 $Result = mysqli_query($con, $Fetch);
 while ($data = mysqli_fetch_row($Result)) {
     $ID = $data[0];
