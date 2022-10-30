@@ -59,7 +59,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
             <span class=" icon fa fa-gear"></span> <span class="link">Settings</span>
         </a>
         <a href="alter.php" class="side-link active">
-            <span class=" icon fa fa-gear active"></span> <span class="link">Change Settings</span>
+            <span class=" icon fa fa-gear active"></span> <span class="link">Change/Track</span>
         </a>
     </div>
 
@@ -166,8 +166,24 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
             <div class="btn-holder">
                 <button class="dope-btn" id="toggle-contact-btn">Change Password</button>
             </div>
+        </div>
+    </section>
+    <section class="panel">
+        <h1>Track</h1>
+        <div class="grid">
+            <div class="btn-holder">
+                <a href="loan-prog.php">
+                    <button class="dope-btn">Progress Of Loan</button>
+                </a>
+            </div>
+            <div class="btn-holder">
+                <a href="msg-prog.php">
+                    <button class="dope-btn">Progress Of Query</button>
+                </a>
+            </div>
 
         </div>
+
 
     </section>
 </main>

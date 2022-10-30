@@ -91,7 +91,7 @@ while ($data = mysqli_fetch_assoc($result3)) {
                 <span class=" icon fa fa-gear active"></span> <span class="link">Dashboard</span>
             </a>
             <a href="alter.php" class="side-link">
-                <span class=" icon fa fa-gear"></span> <span class="link">Change Settings</span>
+                <span class=" icon fa fa-gear"></span> <span class="link">Change/Track</span>
             </a>
         </div>
 
