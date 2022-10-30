@@ -22,13 +22,13 @@ $last = date('Y-m-30');
 $spent = 0;
 $earn = 0;
 
-$Fetch2 = "SELECT * FROM `transaction` WHERE `From_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last';";
+$Fetch2 = "SELECT * FROM `transaction` WHERE `From_Acc` = $myacc AND `Date` BETWEEN '$first' AND '$last' AND `To_Acc` != $myacc;";
 $result = mysqli_query($con, $Fetch2);
 while ($data = mysqli_fetch_assoc($result)) {
     $spent += $data['Amount'];
 }
 
-$Fetch3 = "SELECT * FROM `transaction` WHERE `To_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last';";
+$Fetch3 = "SELECT * FROM `transaction` WHERE `To_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last' AND `From_Acc` != $myacc;";
 $result3 = mysqli_query($con, $Fetch3);
 while ($data = mysqli_fetch_assoc($result3)) {
     $earn += $data['Amount'];
@@ -135,13 +135,20 @@ while ($data = mysqli_fetch_assoc($result3)) {
             <div class="expense-card">
                 <h1>Expense</h1>
                 <table>
+                    <tr style="border: 2px solid black;">
+                        <th style="border: 2px solid black;text-align:center;">Receiver</th>
+                        <th style="border: 2px solid black;text-align:center;">Receipt ID</th>
+                        <th style="border: 2px solid black;text-align:center;">Amount</th>
+                    </tr>
+
                     <?php
-                    $Fetch4 = "SELECT * FROM `transaction` WHERE `From_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last';";
+                    $Fetch4 = "SELECT * FROM `transaction` WHERE `From_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last' AND `To_Acc` != $myacc ORDER BY `Time` DESC;";
                     $result4 = mysqli_query($con, $Fetch4);
                     if (mysqli_num_rows($result4) > 0) {
                         while ($data = mysqli_fetch_assoc($result4)) { ?>
                             <tr>
                                 <th><?php echo $data['Receiver']; ?></th>
+                                <td><?php echo $data['Receipt_No']; ?></td>
                                 <td><?php echo $data['Amount']; ?>/-</td>
                             </tr>
                         <?php }
@@ -154,13 +161,20 @@ while ($data = mysqli_fetch_assoc($result3)) {
             <div class="expense-card">
                 <h1>Earnings</h1>
                 <table>
+                <tr style="border: 2px solid black;">
+                        <th style="border: 2px solid black;text-align:center;">Sender</th>
+                        <th style="border: 2px solid black;text-align:center;">Receipt ID</th>
+                        <th style="border: 2px solid black;text-align:center;">Amount</th>
+                    </tr>
+
                     <?php
-                    $Fetch5 = "SELECT * FROM `transaction` WHERE `To_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last';";
+                    $Fetch5 = "SELECT * FROM `transaction` WHERE `To_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last' AND `From_Acc` != $myacc;";
                     $result5 = mysqli_query($con, $Fetch5);
                     if (mysqli_num_rows($result5)) {
                         while ($data = mysqli_fetch_assoc($result5)) { ?>
                             <tr>
                                 <th><?php echo $data['Sender']; ?></th>
+                                <td><?php echo $data['Receipt_No']; ?></td>
                                 <td><?php echo $data['Amount']; ?>/-</td>
                             </tr>
                         <?php }

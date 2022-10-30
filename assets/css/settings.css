@@ -125,16 +125,18 @@ body {
     font-size: 20px;
     opacity: 0.52;
 }
-.content{
-    width: 70%;
+
+.content {
+    width: 80%;
     height: 100vh;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
-.spent-card{
+
+.spent-card {
     position: relative;
     width: 100%;
     height: 100%;
@@ -143,26 +145,30 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0 black;
 }
-.amount{
+
+.amount {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 40px;
 }
-.earn{
-    color:#00ff80;
+
+.earn {
+    color: #00ff80;
 }
-.spent{
+
+.spent {
     color: crimson;
 }
 
-.spent-card .alert{
+.spent-card .alert {
     font-size: 20px;
     position: absolute;
     bottom: 5%;
 }
-.expense-card{
+
+.expense-card {
     position: relative;
     width: 100%;
     height: 100%;
@@ -172,14 +178,26 @@ body {
     box-shadow: 0 0 10px 0 black;
     overflow-y: scroll;
 }
-.expense-card th{
-    width: 75%;
+
+.expense-card h1 {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-clr);
+    z-index: 999;
+}
+.expense-card th {
+    width: 60%;
     text-align: justify;
     padding-left: 30px;
 }
-.change{
+
+.expense-card td {
+    text-align: center;
+}
+
+.change {
     position: relative;
-    width: 100%;
+    width: 210%;
     height: 100%;
     padding: 20px;
     display: flex;
@@ -188,43 +206,51 @@ body {
     background-color: var(--white-clr);
     box-shadow: 0 0 5px 0 black;
 }
-.change > h1{
+
+.change>h1 {
     position: absolute;
     top: 0;
 }
-.change a > i{
+
+.change a>i {
     font-size: 72px;
-    color: #100202  ;
-}
-.rotate{
-    animation: rotate 5000ms linear infinite;
-}
-.rotate:hover{
-    animation: rotate 500ms linear infinite;
-}
-@keyframes rotate {
-    to{
-        transform: rotate(360deg);
-    }    
+    color: #100202;
 }
 
-.panel{
+.rotate {
+    animation: rotate 5000ms linear infinite;
+}
+
+.rotate:hover {
+    animation: rotate 500ms linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.panel {
     width: 93%;
     height: 100%;
     border: 3px solid seagreen;
     background: var(--white-clr);
 }
-.grid{
+
+.grid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
-.btn-holder{
+
+.btn-holder {
     width: 100%;
     height: 100%;
     padding: 10px;
 }
-.dope-btn{
+
+.dope-btn {
     width: 100%;
     padding: 10px;
     font-size: 23px;
@@ -232,33 +258,38 @@ body {
     background: #00ff80;
     transition: all 500ms;
 }
-.dope-btn:hover{
+
+.dope-btn:hover {
     background: #000;
     color: red;
 }
-.change-box{
+
+.change-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 50%;
     height: 50%;
     padding: 10px;
     border: 3px double forestgreen;
     z-index: 9999;
 }
-.change-box .input{
+
+.change-box .input {
     width: 100%;
     padding: 5px;
     font-size: 20px;
     border: 2px solid #00ff80;
 }
-.close-btn{
+
+.close-btn {
     position: absolute;
     top: 3%;
     right: 3%;
 }
-.box-btn{
+
+.box-btn {
     padding: 10px 30px;
     font-size: 20px;
     position: absolute;
