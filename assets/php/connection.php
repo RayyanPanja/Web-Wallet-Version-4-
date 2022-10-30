@@ -6,5 +6,5 @@ $database = "wallet";
 
 $con = mysqli_connect($server,$user,$psw,$database);
 if(!$con){
-    die("ERROR");
+    die('Connection Error CODE-404'.mysqli_connect_error());
 }

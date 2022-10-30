@@ -1,7 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
---
+-- Author: Panja Rayyan Gulamhusen
 -- Host: 127.0.0.1
 -- Generation Time: Oct 29, 2022 at 04:51 PM
 -- Server version: 10.4.24-MariaDB
