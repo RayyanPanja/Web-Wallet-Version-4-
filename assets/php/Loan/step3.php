@@ -54,8 +54,8 @@ $Name = $_SESSION['Name'];
                 <a href="../../../index.php #Home" class="side-link">Home</a>
                 <a href="../../../index.php #About" class="side-link">About Us</a>
                 <a href="../../../index.php #Service" class="side-link">Services</a>
-                <a href="../transfer/transfer.php" class="active-side-link side-link">Transfer</a>
-                <a href="step1.php" class="side-link">Apply For Loan</a>
+                <a href="../transfer/transfer.php" class="side-link">Transfer</a>
+                <a href="step1.php" class="active-side-link  side-link">Apply For Loan</a>
                 <a href="../Balance/balance.php" class="side-link">Balance</a>
                 <a href="../Settings/dashboard.php" class="side-link"><i class="fas fa-gear  rotate"></i></a>
             </div>

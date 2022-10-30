@@ -271,3 +271,22 @@
     bottom: 20px;
     transform: translate(-50%,-50%);
 }
+.termbox{
+    width: 50ch;
+    height: 30%;
+    padding: 15px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.termbox .btn-set{
+    position: absolute;
+    right: 10%;
+    bottom: 3%;
+}
+.termbox .dope{
+    padding: 5px 25px;
+    background: #6a5ad0;
+    color: white;
+}

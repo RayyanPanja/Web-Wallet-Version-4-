@@ -54,17 +54,13 @@ $Name = $_SESSION['Name'];
                 <a href="../../../index.php #Home" class="side-link">Home</a>
                 <a href="../../../index.php #About" class="side-link">About Us</a>
                 <a href="../../../index.php #Service" class="side-link">Services</a>
-                <a href="transfer.php" class="active-side-link side-link">Transfer</a>
-                <a href="step1.php" class="side-link">Apply For Loan</a>
+                <a href="transfer.php" class=" side-link">Transfer</a>
+                <a href="step1.php" class="active-side-link side-link">Apply For Loan</a>
                 <a href="../Balance/balance.php" class="side-link">Balance</a>
                 <a href="../Settings/dashboard.php" class="side-link"><i class="fas fa-gear  rotate"></i></a>
             </div>
             <p style="position:absolute; bottom:20%; padding: 10px;">Double Click anywhere to Exit Side menu</p>
         </nav>
-    </dialog>
-
-    <dialog id="termbox" class="termsdlg">
-        <h1>Terms & Conditions</h1>
     </dialog>
 
     <main>
@@ -94,12 +90,10 @@ $Name = $_SESSION['Name'];
                             <form action="processor/proc4.php" method="post">
                                 <div class="package-wrapper">
                                     <div class="terms">
-                                        <span id="terms">
-                                            <input type="checkbox" required>
-                                            Terms & Conditions
-                                        </span>
-
+                                        <input type="checkbox" id="tick" required>
+                                        Terms & Conditions
                                     </div>
+
                                     <div class="package-status">
                                         <?php echo $data['Status']; ?>
                                     </div>
@@ -141,6 +135,27 @@ $Name = $_SESSION['Name'];
         </section>
 
     </main>
+
+    <dialog class="termbox" id="termbox" open>
+        <form method="dialog">
+            <h1>Terms & Conditions</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, aspernatur.</p>
+            <p>Cumque dignissimos veritatis quae? Ratione cumque pariatur placeat facilis fuga?</p>
+            <p>Cumque dignissimos veritatis quae? Ratione cumque pariatur placeat facilis fuga?</p>
+            <p>Cumque dignissimos veritatis quae? Ratione cumque pariatur placeat facilis fuga?</p>
+            <p>Cumque dignissimos veritatis quae? Ratione cumque pariatur placeat facilis fuga?</p>
+            <div class="btn-set">
+                <button class="dope" id="agree">Agree</button>
+            </div>
+
+        </form>
+    </dialog>
+
+
+
+
+
+
 
     <footer class="footer">
         <div class="footer__addr">
