@@ -80,13 +80,6 @@ $ApplicationID = $_SESSION['tempid'];
 
     <main>
         <section>
-            <div class="step-container">
-                <span class="steps active">1</span>
-                <span class="steps">2</span>
-                <span class="steps">3</span>
-                <span class="steps">4</span>
-            </div>
-
             <div class="loan-container">
                 <h1>Application Submitted Successfully</h1>
                 <h2>Application ID:- &nbsp;<?php echo $ApplicationID; ?></h2>

@@ -47,9 +47,9 @@ $id = $_POST['receipt'];
         <a href="../../../index.php #About" class="link">About Us</a>
         <a href="../../../index.php #Service" class="link">Services</a>
         <a href="transfer.php" class="link">Transfer</a>
-        <a href="../php/Loan/" class="link">Apply For Loan</a>
-        <a href="../php/Balance/" class="link">Balance</a>
-        <a href="../php/Settings/" class="link"><i class="fas fa-gear rotate"></i></a>
+        <a href="../Loan/step1.php" class="link">Apply For Loan</a>
+        <a href="balance.php" class="link">Balance</a>
+        <a href="../Settings/dashboard.php" class="link"><i class="fas fa-gear rotate"></i></a>
         <button type="submit" class="logout-btn" id="logout-btn">Logout</button>
 
         <a href="javascript:void(0)" class="icon" id="toggle">
@@ -65,9 +65,9 @@ $id = $_POST['receipt'];
                 <a href="../../../index.php #About" class="side-link">About Us</a>
                 <a href="../../../index.php #Service" class="side-link">Services</a>
                 <a href="../php/transfer/transfer.php" class="side-link">Transfer</a>
-                <a href="../php/Loan/" class="side-link">Apply For Loan</a>
+                <a href="../Loan/step1.php" class="side-link">Apply For Loan</a>
                 <a href="balance.php" class="active-side-link side-link">Balance</a>
-                <a href="../php/Settings/" class="side-link"><i class="fas fa-gear  rotate"></i></a>
+                <a href="../Settings/dashboard.php" class="side-link"><i class="fas fa-gear  rotate"></i></a>
             </div>
             <button type="submit" class="logout-btn" id="side-logout-btn">Logout</button>
             <p style="position:absolute; bottom:20%; padding: 10px;">Double Click anywhere to Exit Side menu</p>

@@ -40,7 +40,7 @@ $Name = $_SESSION['Name'];
         <a href="transfer.php" class="link">Transfer</a>
         <a href="step1.php" class="link">Apply For Loan</a>
         <a href="../Balance/balance.php" class="link">Balance</a>
-        <a href="../php/Settings/" class="link"><i class="fas fa-gear rotate"></i></a>
+        <a href="../Settings/dashboard.php" class="link"><i class="fas fa-gear rotate"></i></a>
 
         <a href="javascript:void(0)" class="icon" id="toggle">
             <span class="bars"></span>
@@ -57,7 +57,7 @@ $Name = $_SESSION['Name'];
                 <a href="transfer.php" class="active-side-link side-link">Transfer</a>
                 <a href="step1.php" class="side-link">Apply For Loan</a>
                 <a href="../Balance/balance.php" class="side-link">Balance</a>
-                <a href="../php/Settings/" class="side-link"><i class="fas fa-gear  rotate"></i></a>
+                <a href="../Settings/dashboard.php" class="side-link"><i class="fas fa-gear  rotate"></i></a>
             </div>
             <p style="position:absolute; bottom:20%; padding: 10px;">Double Click anywhere to Exit Side menu</p>
         </nav>

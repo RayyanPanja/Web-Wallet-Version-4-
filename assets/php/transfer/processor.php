@@ -30,10 +30,10 @@
         <a href="../../../../index.php #Home" class="link">Home</a>
         <a href="../../../../index.php #About" class="link">About Us</a>
         <a href="../../../../index.php #Service" class="link">Services</a>
-        <a href="../../php/transfer/transfer.php" class="link">Transfer</a>
-        <a href="../../php/Loan/" class="link">Apply For Loan</a>
-        <a href="../../php/Balance/" class="link">Balance</a>
-        <a href="../../php/Settings/" class="link"><i class="fas fa-gear rotate"></i></a>
+        <a href="transfer.php" class="link">Transfer</a>
+        <a href="../Loan/step1.php" class="link">Apply For Loan</a>
+        <a href="../Balance/balance.php" class="link">Balance</a>
+        <a href="../Settings/dashboard.php" class="link"><i class="fas fa-gear rotate"></i></a>
         <a href="javascript:void(0)" class="icon" id="toggle">
             <span class="bars"></span>
         </a>
