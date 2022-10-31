@@ -81,6 +81,7 @@ while ($data = mysqli_fetch_row($Result)) {
     <section style="height:100vh;">
         <p>*When Receipt Generates Take A Screen Shot For Future Reference</p>
         <lottie-player id="tick" src="../../lottie/tick.json" background="transparent" speed="2" class="tick" autoplay></lottie-player>'
+        <audio src="../../audio/notify.mp3" id="notify"></audio>
         <div class="success-text">
             <h1>
                 <?php

@@ -3,8 +3,10 @@ let size = Math.floor(window.screen.width);
 const tick = document.querySelector('#tick');
 const Htxt = document.querySelector('.success-text');
 const receipt = document.querySelector('#receipt');
+const audio = document.querySelector('#notify');
 receipt.style.width = 5 + "px";
 setInterval(() => {
+    audio.play();
     tick.style.transform = "translateY(-80px)";
     setInterval(() => {
         Htxt.style.fontSize = 35 + "px";
@@ -20,6 +22,7 @@ setInterval(() => {
                 } else {
                     receipt.style.width = 25 + "%";
                 }
+                audio.pause();
             }, 500);
         }, 1000);
     }, 1000);
