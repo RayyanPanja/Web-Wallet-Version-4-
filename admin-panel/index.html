@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,36 @@
     <link rel="stylesheet" href="assets/css/root.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+    <section>
+        <dialog class="login-form" id="login-box">
+            <h1>Login</h1>
+            <form action="assets/php/login.php" method="post">
+                <div class="row">
+                    <div class="col-lab">
+                        <label for="Username">Username</label>
+                    </div>
+                    <div class="col-inp">
+                        <input type="text" name="username" id="" class="input" placeholder="UserName">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lab">
+                        <label for="Password">Password</label>
+                    </div>
+                    <div class="col-inp">
+                        <input type="password" name="password" id="psw" placeholder="******" class="input">
+                    </div>
+                </div>
+                <div class="login-btn-set">
+                    <button type="reset" class="cancle  btn ">Cancle</button>
+                    <button type="submit" class="submit btn ">Login</button>
+                </div>
+            </form>
+        </dialog>
+    </section>
+
     <header class="hero-section">
         <img src="assets/img/Hero.jpg" alt="hero-back" class="hero-img">
         <div class="heading">
@@ -23,20 +53,7 @@
             <button class="login-btn" id="login-btn">Login</button>
         </div>
     </header>
-    <section>
-        <dialog id="login-box">
-            <h1>Login</h1>
-            <form action="assets/php/login.php" method="post">
-                <div class="col-lab">
-                    <label for="Username">Username</label>
-                </div>
-                <div class="col-inp">
-                    <input type="text" name="username" id="" class="input" placeholder="UserName">
-                </div>
-
-            </form>
-        </dialog>
-    </section>
     <script src="assets/js/dialog.js"></script>
 </body>
+
 </html>

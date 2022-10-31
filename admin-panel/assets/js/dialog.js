@@ -15,3 +15,5 @@ function DialogHandler(Opener,Closer,Box,Modal) {
         Dialog.close();
     });    
 }
+
+DialogHandler('login-btn','login-close-btn','login-box',true);
