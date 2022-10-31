@@ -4,9 +4,6 @@ session_start();
 $myacc = $_SESSION['Account'];
 $Password = $_SESSION['Password'];
 $Name = $_SESSION['Name'];
-
-$words = str_word_count($Name);
-$new = str_split($Name, $words + $words);
 $myamount;
 $email;
 
@@ -130,7 +127,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
     <section class="top-sec">
         <div class="hello">
             <h1>Change Settings</h1>
-            <p>Welcome Back!! <?php echo $new[0] . $new[1]; ?></p>
+            <p>Welcome Back!! <?php echo $Name; ?></p>
         </div>
     </section>
 
