@@ -223,29 +223,6 @@ section {
 }
 
 
-.row::after {
-    content: '';
-    float: left;
-    display: table;
-    clear: both;
-}
-
-.col-lab {
-    padding: 5px;
-    width: 100%;
-}
-
-.col-inp {
-    padding: 5px;
-    width: 100%;
-}
-
-.input {
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-}
-
 .rotate:hover {
     border-radius: 100%;
     animation: spin 2s linear infinite;

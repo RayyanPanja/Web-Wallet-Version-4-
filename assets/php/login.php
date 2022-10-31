@@ -15,7 +15,7 @@ if (mysqli_num_rows($fetresult) > 0) {
     while ($data = mysqli_fetch_assoc($fetresult)) {
         $account = $data['Account_number'];
         $password = $data['Password'];
-        $name = $data['Name'];
+        $name = $data['Firstname'];
         $address = $data['Address'];
     }
 }

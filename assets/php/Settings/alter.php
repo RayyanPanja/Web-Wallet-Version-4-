@@ -74,25 +74,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 <dialog class="change-box" id="name-box">
     <h1>Change Name</h1>
     <i class="fa fa-xmark close-btn" id="name-close-btn"></i>
-    <form action="" method="post">
-        <div class="row">
-            <div class="col-lab">
-                <label for="name">Name</label>
-            </div>
-            <div class="col-inp">
-                <input type="text" name="name" id="name" placeholder="Name..." class="input">
-            </div>
-            <div class="box-btn-pos">
-                <button type="submit" class="box-btn">Set</button>
-            </div>
-        </div>
-    </form>
-</dialog>
-
-<dialog class="change-box" id="name-box">
-    <h1>Change Name</h1>
-    <i class="fa fa-xmark close-btn" id="name-close-btn"></i>
-    <form action="" method="post">
+    <form action="processor/name.php" method="post">
         <div class="row">
             <div class="col-lab">
                 <label for="name">Name</label>
@@ -110,7 +92,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 <dialog class="change-box" id="email-box">
     <h1>Change Email</h1>
     <i class="fa fa-xmark close-btn" id="email-close-btn"></i>
-    <form action="" method="post">
+    <form action="processor/email.php" method="post">
         <div class="row">
             <div class="col-lab">
                 <label for="Email">Email</label>
@@ -128,7 +110,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 <dialog class="change-box" id="contact-box">
     <h1>Change Contact</h1>
     <i class="fa fa-xmark close-btn" id="contact-close-btn"></i>
-    <form action="" method="post">
+    <form action="processor/contact.php" method="post">
         <div class="row">
             <div class="col-lab">
                 <label for="contact">Contact</label>

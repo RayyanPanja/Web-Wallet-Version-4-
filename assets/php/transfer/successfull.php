@@ -80,14 +80,14 @@ while ($data = mysqli_fetch_row($Result)) {
 
     <section style="height:100vh;">
         <p>*When Receipt Generates Take A Screen Shot For Future Reference</p>
-        <lottie-player id="tick" src="https://assets5.lottiefiles.com/packages/lf20_sabvcsrv.json" background="transparent" speed="2" class="tick" autoplay></lottie-player>'
+        <lottie-player id="tick" src="../../lottie/tick.json" background="transparent" speed="2" class="tick" autoplay></lottie-player>'
         <div class="success-text">
             <h1>
                 <?php
                 if($myacc == $hisacc){
                     echo "Self Transfer....";
                 }else{
-                    echo "Traaaansfer Successfull";
+                    echo "Transfer Successfull";
                 }
                 ?>
             </h1>
@@ -143,6 +143,6 @@ while ($data = mysqli_fetch_row($Result)) {
 </body>
 <script src="../../js/main.js"></script>
 <script src="../../js/animate.js"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="../../lottie/animate.js"></script>
 
 </html>

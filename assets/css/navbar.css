@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     display: flex;
-    gap: 10px;
+    gap: 3px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -122,9 +122,6 @@
 
 .login-btn,
 .logout-btn {
-    position: absolute;
-    top: 5px;
-    right: 20%;
     padding: 5px 20px;
     font-size: 20px;
     background-color: transparent;

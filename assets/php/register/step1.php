@@ -60,12 +60,26 @@
         <div class="register-form">
             <h1>Persnol Information</h1>
             <form action="processor/step1.php" method="post">
+                <div class="row-flex">
+                    <div class="col-lab-2">
+                        <label for="">SirName</label>
+                    </div>
+                    <div class="col-lab-2">
+                        <label for="First Name">FirstName</label>
+                    </div>
+                    <div class="col-input-2">
+                        <input type="text" name="sirname" id="sirname" class="small-inputs" placeholder="SirName">
+                    </div>
+                    <div class="col-input-2">
+                        <input type="text" name="firstname" id="firstname" class="small-inputs" placeholder="FirstName">
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lab">
-                        <label for="Full Name">Full Name</label>
+                        <label for="Father">FatherName</label>
                     </div>
                     <div class="col-inp">
-                        <input type="text" name="name" id="name" class="input" placeholder="Sirname Name Fathername">
+                        <input type="text" name="fathername" id="fathername" class="input" placeholder="FatherName">
                     </div>
                 </div>
                 <div class="row">

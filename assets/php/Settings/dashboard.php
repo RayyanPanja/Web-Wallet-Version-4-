@@ -5,11 +5,6 @@ $myacc = $_SESSION['Account'];
 $Password = $_SESSION['Password'];
 $Name = $_SESSION['Name'];
 
-$words = str_word_count($Name);
-$new = str_split($Name, $words + $words);
-$myamount;
-$email;
-
 $FetchMain = "SELECT * FROM main WHERE `main`.`Account_number` = $myacc;";
 $FetchMainResult = mysqli_query($con, $FetchMain);
 while ($data = mysqli_fetch_assoc($FetchMainResult)) {
@@ -18,7 +13,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 }
 
 $first = date('Y-m-01');
-$last = date('Y-m-30');
+$last = date('Y-m-28');
 $spent = 0;
 $earn = 0;
 
@@ -97,9 +92,7 @@ while ($data = mysqli_fetch_assoc($result3)) {
 
         <div class="user-detail">
             <i class="fa fa-user"></i>
-            <div class="username">
-                <?php echo $Name; ?>
-            </div>
+            <div class="username"><?php echo $Name; ?> </div>
         </div>
     </nav>
 
@@ -107,7 +100,7 @@ while ($data = mysqli_fetch_assoc($result3)) {
         <section class="top-sec">
             <div class="hello">
                 <h1>Dashboard</h1>
-                <p>Welcome Back!! <?php echo $new[0] . $new[1]; ?></p>
+                <p>Welcome Back!! <?php echo $Name ?></p>
             </div>
         </section>
         <section class="content">

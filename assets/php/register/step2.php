@@ -74,7 +74,7 @@
                         <label for="Contact">Contact Number</label>
                     </div>
                     <div class="col-inp-big">
-                        <input type="tel" name="contact" id="contact" class="input" placeholder="00000 00000" required>
+                        <input type="tel" name="contact" id="contact" class="input" placeholder="00000 00000" maxlength="10" required>
                     </div>
                 </div>
                 <div class="register-btn-set">
