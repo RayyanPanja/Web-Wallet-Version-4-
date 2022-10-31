@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Wallet Admin Panel</title>
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="../assets/icons/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <!-- Css -->
@@ -24,8 +26,17 @@
     <section>
         <dialog id="login-box">
             <h1>Login</h1>
+            <form action="assets/php/login.php" method="post">
+                <div class="col-lab">
+                    <label for="Username">Username</label>
+                </div>
+                <div class="col-inp">
+                    <input type="text" name="username" id="" class="input" placeholder="UserName">
+                </div>
 
+            </form>
         </dialog>
     </section>
+    <script src="assets/js/dialog.js"></script>
 </body>
 </html>
