@@ -86,7 +86,7 @@
             if (mysqli_num_rows($Result2) > 0) {
                 while ($data = mysqli_fetch_assoc($Result2)) {
                     $hisAmount = $data['Amount'];
-                    $hisName = $data['Name'];
+                    $hisName = $data['Firstname'];
                 }
 
                 if ($myAmount <= $AmountSent || $myAmount <= 0) {

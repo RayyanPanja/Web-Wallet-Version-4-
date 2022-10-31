@@ -13,7 +13,7 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 }
 
 $first = date('Y-m-01');
-$last = date('Y-m-28');
+$last = date('Y-m-31');
 $spent = 0;
 $earn = 0;
 
@@ -161,7 +161,7 @@ while ($data = mysqli_fetch_assoc($result3)) {
                     </tr>
 
                     <?php
-                    $Fetch5 = "SELECT * FROM `transaction` WHERE `To_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last' AND `From_Acc` != $myacc;";
+                    $Fetch5 = "SELECT * FROM `transaction` WHERE `To_Acc` = $myacc AND `Date` BETWEEN '$first' and '$last' AND `From_Acc` != $myacc ORDER BY `Time` DESC;";
                     $result5 = mysqli_query($con, $Fetch5);
                     if (mysqli_num_rows($result5)) {
                         while ($data = mysqli_fetch_assoc($result5)) { ?>
