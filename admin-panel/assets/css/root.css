@@ -1,38 +1,43 @@
-@import url(../../../assets/css/fonts.css);
-:root{
-    --primary-clr: #eeede9c5;
+:root {
+    --primary-clr: #080505;
     --secondary-clr: #3e4bc1;
     --accent-clr: #FFFF00;
-    --font-fam: 'Clash Display',sans-serif;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-fam);
 }
-body{
+
+body {
     overflow-x: hidden;
+    background: var(--primary-clr);
 }
-button{
+
+button {
     cursor: pointer;
 }
-.row::after{
+
+.row::after {
     content: '';
     display: table;
     clear: both;
 }
-.col-lab{
+
+.col-lab {
     width: 100%;
     padding: 2px;
     float: left;
 }
-.col-inp{
+
+.col-inp {
     width: 90%;
     padding: 2px;
     float: left;
 }
-.input{
+
+.input {
     padding: 5px;
     font-size: 20px;
     width: 100%;
@@ -40,7 +45,8 @@ button{
     border-bottom: 2px solid gray;
     background: transparent;
 }
-.btn{
+
+.btn {
     padding: 10px 30px;
     font-size: 20px;
 }
