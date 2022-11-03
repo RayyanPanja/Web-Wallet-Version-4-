@@ -50,6 +50,21 @@ $Name = $_SESSION['Name'];
     <dialog id="sidenav">
         <nav class="side-nav">
             <button id="CloseSideNav" class="X-btn">X</button>
+            <form class="color-picker">
+                <fieldset>
+                    <legend>Pick A Theme</legend>
+                    <div class="full-space">
+                        <label for="light">Light</label>
+                        <input type="radio" name="theme" id="light" checked>
+                    </div>
+
+                    <div class="full-space">
+                        <label for="dark">Dark</label>
+                        <input type="radio" name="theme" id="dark">
+                    </div>
+
+                </fieldset>
+            </form>
             <div class="side-link-set">
                 <a href="../../../index.php #Home" class="side-link">Home</a>
                 <a href="../../../index.php #About" class="side-link">About Us</a>
@@ -176,5 +191,6 @@ $Name = $_SESSION['Name'];
 </body>
 <script src="../../js/main.js"></script>
 <script src="../../js/terms.js"></script>
+<script src="../../js/theme.js"></script>
 
 </html>

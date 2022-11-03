@@ -39,6 +39,21 @@
     <dialog id="sidenav">
         <nav class="side-nav">
             <button id="CloseSideNav" class="X-btn">X</button>
+            <form class="color-picker">
+                <fieldset>
+                    <legend>Pick A Theme</legend>
+                    <div class="full-space">
+                        <label for="light">Light</label>
+                        <input type="radio" name="theme" id="light" checked>
+                    </div>
+
+                    <div class="full-space">
+                        <label for="dark">Dark</label>
+                        <input type="radio" name="theme" id="dark">
+                    </div>
+
+                </fieldset>
+            </form>
             <div class="side-link-set">
                 <a href="../../../index.html #Home" class="side-link">Home</a>
                 <a href="../../../index.html #About" class="side-link">About Us</a>
@@ -70,7 +85,7 @@
                 </div>
 
                 <div class="row">
-                <div class="col-lab">
+                    <div class="col-lab">
                         <label for="password">Retype Password</label>
                     </div>
                     <div class="col-inp-big">
@@ -86,7 +101,7 @@
     </section>
 
 
-<footer class="footer">
+    <footer class="footer">
         <div class="footer__addr">
             <h1 class="footer__logo">Web Wallet</h1>
 
@@ -104,5 +119,7 @@
     </footer>
 </body>
 <script src="../../js/main.js"></script>
+<script src="../../js/theme.js"></script>
+
 
 </html>

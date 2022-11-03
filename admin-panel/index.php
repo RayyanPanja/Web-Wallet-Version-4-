@@ -34,7 +34,7 @@ $AdminDesig = $_SESSION['Desig'];
 <body>
     <nav class="navbar">
         <h1>Admin Panel</h1>
-        <h2>Name:- <?php echo $AdminName; ?> |</h2> 
+        <h2>Admin:- <?php echo $AdminName; ?> |</h2> 
         <h2>| Designation:- (<?php echo $AdminDesig; ?>) </h2>
         <div class="logout">
             <form action="" method="post">
@@ -43,6 +43,11 @@ $AdminDesig = $_SESSION['Desig'];
         </div>
     </nav>
 
+    <main>
+        <section>
+            
+        </section>
+    </main>
     <script src="assets/js/dialog.js"></script>
 </body>
 

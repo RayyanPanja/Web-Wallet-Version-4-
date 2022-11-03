@@ -14,7 +14,11 @@ body {
     overflow-x: hidden;
     background: var(--primary-clr);
 }
-
+section{
+    width: 100%;
+    padding: 10px;
+    height: 100vh;
+}
 button {
     cursor: pointer;
 }

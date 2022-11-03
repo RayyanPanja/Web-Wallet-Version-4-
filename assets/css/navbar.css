@@ -94,13 +94,13 @@
     top: 0;
     width: 20%;
     height: 100vh;
-    background: #efefef;
+    background: var(--primary-clr);
     z-index: 9999;
     border-right: 2px solid purple;
 }
 
 .side-link-set {
-    margin-top: 15%;
+    margin-top: 35%;
 }
 
 .side-link {
@@ -133,7 +133,7 @@
 }
 
 .login-btn:hover {
-    background: black;
+    background: var(--grey-accent);
     color: var(--secondary-clr);
 }
 .logout-btn {

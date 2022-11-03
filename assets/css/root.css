@@ -13,6 +13,48 @@
     --font-family: 'Clash Display', sans-serif;
 }
 
+.color-picker{
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    width: 100%;
+}
+.color-picker .full-space{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.color-picker input[type="radio"]{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    outline: 3px solid black;
+    outline-offset: 3px;
+}
+
+.color-picker input[type="radio"]:checked{
+    background: var(--radio-clr);
+}
+.color-picker #light{
+    --radio-clr: grey;
+}
+.color-picker #dark{
+    --radio-clr: black;
+}
+#dark,
+:root:has(#dark:checked){
+    --primary-clr: #252121;
+    --secondary-clr: #88ff00;
+    --accent-clr: #1e14d7;
+    --grey-accent: #dddddda9;
+    --light-clr: #252222ea;
+    --white-clr: #171414;
+    --font-clr: #f9f9f9;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -141,9 +183,9 @@ section {
     display: flex;
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    background-color: #fff;
-    border-top: 1px solid #e5e5e5;
+    color: var(--font-clr);
+    background: var(--primary-clr);
+    border-top: 1px solid var(--primary-clr);
 }
 
 .footer>* {
@@ -175,7 +217,7 @@ section {
 
 .footer address {
     font-style: normal;
-    color: #999;
+    color: var(--font-clr);
 }
 
 .footer__btn {
@@ -184,9 +226,9 @@ section {
     justify-content: center;
     height: 36px;
     max-width: max-content;
-    background-color: rgb(33, 33, 33, 0.07);
+    background-color: var(--secondary-clr);
     border-radius: 100px;
-    color: #2f2f2f;
+    color: var(--font-clr);
     line-height: 0;
     margin: 0.6em 0;
     font-size: 1rem;
@@ -219,7 +261,7 @@ section {
 .legal {
     display: flex;
     flex-wrap: wrap;
-    color: #999;
+    color: var(--font-clr);
 }
 
 
@@ -250,6 +292,8 @@ section {
     font-size: 20px;
     transition: all 500ms;
     border: 2px double teal;
+    color: var(--font-clr);
+    background-color: var(--white-clr);
 }
 
 .key[type="submit"] {
@@ -279,7 +323,7 @@ section {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background: black;
+    background: var(--font-clr);
     box-shadow: 0 0 20px 2px crimson;
     font-size: 25px;
     color: red;
@@ -295,7 +339,7 @@ section {
     font-size: 25px;
     border: 3px double red;
     background-color: #000000;
-    color: #c6c4c6;
+    color: var(--font-clr);
     border-radius: 75px;
     transition: all 250ms;
 }
@@ -332,19 +376,19 @@ section {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000000;
+    background-color:#000000;
     transition: all 500ms;
 }
 
 .receipt * {
-    color: #e5e4e4ea;
+    color: #efefefe0;
 }
 
 .receipt table,
 th,
 td {
     padding: 5px;
-    border: 1px solid #e5e4e4ea;
+    border: 1px solid transparent;
 }
 
 table {
