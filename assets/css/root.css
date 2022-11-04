@@ -31,7 +31,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    outline: 3px solid black;
+    outline: 3px solid var(--font-clr);
     outline-offset: 3px;
 }
 
