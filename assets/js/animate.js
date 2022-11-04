@@ -4,11 +4,11 @@ const Htxt = document.querySelector('.success-text');
 const receipt = document.querySelector('.receipt');
 const audio = document.querySelector('#notify');
 let flag = localStorage.getItem("theme");
+audio.play();
 
 if (flag !== 'dark') {
     receipt.style.width = 5 + "px";
     setInterval(() => {
-        audio.play();
         tick.style.transform = "translateY(-80px)";
         setInterval(() => {
             Htxt.style.fontSize = 35 + "px";
@@ -33,7 +33,6 @@ if (flag !== 'dark') {
         console.log(size);
     })
 } else {
-    audio.play();
     tick.style.transform = "translateY(-80px)";
     if (size <= 412) {
         receipt.style.width = 80 + "%";
@@ -41,8 +40,6 @@ if (flag !== 'dark') {
     } else {
         receipt.style.height = 30 + "%";
         receipt.style.width = 25 + "%";
+        audio.pause();
     }
-    audio.pause();
-
-
 }

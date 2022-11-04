@@ -95,15 +95,15 @@ while ($data = mysqli_fetch_row($Result)) {
     </dialog>
 
     <section style="height:100vh;">
+        <audio src="../../audio/notify.mp3" id="notify"></audio>
         <p>*When Receipt Generates Take A Screen Shot For Future Reference</p>
         <lottie-player id="tick" src="../../lottie/tick.json" background="transparent" speed="2" class="tick" autoplay></lottie-player>'
-        <audio src="../../audio/notify.mp3" id="notify"></audio>
         <div class="success-text">
             <h1>
                 <?php
-                if($myacc == $hisacc){
+                if ($myacc == $hisacc) {
                     echo "Self Transfer....";
-                }else{
+                } else {
                     echo "Transfer Successfull";
                 }
                 ?>
@@ -138,14 +138,14 @@ while ($data = mysqli_fetch_row($Result)) {
                 </tr>
             </table>
         </div>
-
+        
     </section>
 
     <footer id="footer">
         <div style="position: absolute; right: 10%;">
             <p>&copy;CopyRight Owned By Team Web Wallet</p>
         </div>
-
+        
         <nav class="footer-nav">
             <ul>
                 <li><a href="../../../index.php #Home">Home</a></li>
@@ -155,12 +155,12 @@ while ($data = mysqli_fetch_row($Result)) {
             </ul>
         </nav>
         <hr>
-
+        
     </footer>
 </body>
-<script src="../../js/main.js"></script>
-<script src="../../js/animate.js"></script>
 <script src="../../lottie/animate.js"></script>
+<script src="../../js/animate.js"></script>
 <script src="../../js/theme.js"></script>
+<script src="../../js/main.js"></script>
 
 </html>
