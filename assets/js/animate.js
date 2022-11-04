@@ -4,7 +4,7 @@ const Htxt = document.querySelector('.success-text');
 const receipt = document.querySelector('.receipt');
 const audio = document.querySelector('#notify');
 let flag = localStorage.getItem("theme");
-console.log(flag);
+
 if (flag !== 'dark') {
     receipt.style.width = 5 + "px";
     setInterval(() => {
