@@ -4,9 +4,6 @@ session_start();
 $myacc = $_SESSION['Account'];
 $Password = $_SESSION['Password'];
 $Name = $_SESSION['Name'];
-
-$words = str_word_count($Name);
-$new = str_split($Name, $words + $words);
 $myamount;
 $email;
 
