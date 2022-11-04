@@ -33,6 +33,7 @@ if (flag !== 'dark') {
         console.log(size);
     })
 } else {
+    audio.play();
     tick.style.transform = "translateY(-80px)";
     if (size <= 412) {
         receipt.style.width = 80 + "%";
@@ -41,6 +42,7 @@ if (flag !== 'dark') {
         receipt.style.height = 30 + "%";
         receipt.style.width = 25 + "%";
     }
+    audio.pause();
 
 
 }

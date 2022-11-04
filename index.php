@@ -124,13 +124,13 @@ $Name = $_SESSION['Name'];
             <h1 class="greet">Developers</h1>
         </div>
 
-        <div class="grid-3 scroll-x small-gap">
-            <div class="card-wrap">
+        <div class="grid-3 scroll-x small-gap card-set">
+            <div class="card-wrap ">
                 <div class="profile">
-                    <img src="assets/images/profile-rayyan.png" alt="Profile">
+                    <img src="assets/images/rayyan-2.jpg" alt="Profile">
                 </div>
                 <div class="name">
-                    <h3>Panja Rayyan Gulamhusen</h3>
+                    <h3>Panja Rayyan</h3>
                     <p>206920307052</p>
                 </div>
                 <div class="skill flex-center">
@@ -141,7 +141,7 @@ $Name = $_SESSION['Name'];
 
             <div class="card-wrap">
                 <div class="profile">
-                    <img src="assets/images/profile-rayyan.png" alt="Profile">
+                    <img src="assets/images/tejas.jpeg" alt="Profile">
                 </div>
                 <div class="name">
                     <h3>Vachhani Tejas</h3>
@@ -155,7 +155,7 @@ $Name = $_SESSION['Name'];
 
             <div class="card-wrap">
                 <div class="profile">
-                    <img src="assets/images/profile-rayyan.png" alt="Profile">
+                    <img src="assets/images/rayyan.png" alt="Profile">
                 </div>
                 <div class="name">
                     <h3>Kotak Dixit</h3>

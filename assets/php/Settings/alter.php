@@ -29,7 +29,6 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
     <link rel="stylesheet" href="../../icons/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css">
 
     <!-- Css -->
-    <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../../css/media.css">
     <link rel="stylesheet" href="../../css/settings.css">
 
@@ -129,7 +128,22 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
             <h1>Change Settings</h1>
             <p>Welcome Back!! <?php echo $Name; ?></p>
         </div>
+        <form class="color-picker">
+            <fieldset>
+                <legend>Select Theme</legend>
+                <div>
+                    <label for="light">Light</label>
+                    <input type="radio" name="theme" id="light">
+                </div>
+                <div>
+                    <label for="dark">Dark</label>
+                    <input type="radio" name="theme" id="dark">
+                </div>
+            </fieldset>
+        </form>
+
     </section>
+
 
     <section class="panel">
         <div class="grid">
@@ -168,5 +182,6 @@ while ($data = mysqli_fetch_assoc($FetchMainResult)) {
 </main>
 </body>
 <script src="../../js/setting.js"></script>
+<script src="../../js/theme.js"></script>
 
 </html>

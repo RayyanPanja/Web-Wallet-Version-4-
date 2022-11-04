@@ -6,24 +6,29 @@
     display: table;
     clear: both;
 }
-.row-flex{
+
+.row-flex {
     display: flex;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.col-lab-2{
+
+.col-lab-2 {
     width: 50%;
 }
-.col-input-2{
+
+.col-input-2 {
     width: 50%;
 }
-.small-inputs{
+
+.small-inputs {
     width: 90%;
     padding: 10px;
     font-size: 20px;
     background: var(--white-clr);
 }
+
 .col-lab {
     padding: 5px;
     width: 95%;
@@ -120,6 +125,7 @@
     font-size: 20px;
     background: transparent;
     transition: all 500ms;
+    color: var(--font-clr);
 }
 
 .submit:hover {
@@ -155,6 +161,7 @@
     border-radius: 10px;
     font-size: 20px;
     transition: all 500ms;
+    color: black;
 }
 
 .account {
@@ -331,6 +338,11 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: var(--primary-clr);
+}
+
+.termbox * {
+    color: var(--font-clr);
 }
 
 .termbox .btn-set {

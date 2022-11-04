@@ -46,7 +46,6 @@ while ($data = mysqli_fetch_assoc($result3)) {
     <link rel="stylesheet" href="../../icons/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css">
 
     <!-- Css -->
-    <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../../css/media.css">
     <link rel="stylesheet" href="../../css/settings.css">
 
@@ -102,6 +101,19 @@ while ($data = mysqli_fetch_assoc($result3)) {
                 <h1>Dashboard</h1>
                 <p>Welcome Back!! <?php echo $Name ?></p>
             </div>
+            <form class="color-picker">
+                <fieldset>
+                    <legend>Select Theme</legend>
+                    <div>
+                        <label for="light">Light</label>
+                        <input type="radio" name="theme" id="light">
+                    </div>
+                    <div>
+                        <label for="dark">Dark</label>
+                        <input type="radio" name="theme" id="dark">
+                    </div>
+                </fieldset>
+            </form>
         </section>
         <section class="content">
 
@@ -154,7 +166,7 @@ while ($data = mysqli_fetch_assoc($result3)) {
             <div class="expense-card">
                 <h1>Earnings</h1>
                 <table>
-                <tr style="border: 2px solid black;">
+                    <tr style="border: 2px solid black;">
                         <th style="border: 2px solid black;text-align:center;">Sender</th>
                         <th style="border: 2px solid black;text-align:center;">Receipt ID</th>
                         <th style="border: 2px solid black;text-align:center;">Amount</th>
@@ -193,6 +205,7 @@ while ($data = mysqli_fetch_assoc($result3)) {
 </body>
 
 <script src="../../js/main.js"></script>
+<script src="../../js/theme.js"></script>
 <script>
     // Logout Form Popup
     const LogoutBtn = document.querySelector('#logout-btn');
