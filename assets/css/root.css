@@ -10,6 +10,7 @@
     --light-clr: #e5e4e4ea;
     --white-clr: #ffffff;
     --font-clr: #100202;
+    --invert-clr: #000;
     --font-family: 'Clash Display', sans-serif;
 }
 
@@ -31,7 +32,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    outline: 3px solid var(--font-clr);
+    outline: 3px solid var(--invert-clr);
     outline-offset: 3px;
 }
 
@@ -53,6 +54,7 @@
     --light-clr: #252222ea;
     --white-clr: #171414;
     --font-clr: #f9f9f9;
+    --invert-clr: #fff;
 }
 
 ::-webkit-scrollbar {
