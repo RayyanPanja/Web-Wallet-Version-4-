@@ -66,9 +66,11 @@
     }
 
     .profile {
+        margin-top: 5%;
         width: 100px;
         height: 100px;
     }
+
 
     .scroll-x {
         overflow-x: scroll;
