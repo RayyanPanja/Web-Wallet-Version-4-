@@ -70,12 +70,14 @@ main{
 
 .side-link:hover {
     border: 1px solid black;
-    background: #e0d2e5da;
+    background: var(--accent-clr);
+    color: var(--font-clr);
 }
 
 .active {
-    color: var(--accent-clr);
-    background: #e0d2e5da;
+    color: inherit;
+    background: transparent;
+    border: 3px solid var(--secondary-clr);
 }
 
 .icon {
@@ -227,12 +229,23 @@ main{
 }
 
 .rotate:hover {
-    animation: rotate 500ms linear infinite;
+    animation: rotate2 1000ms linear infinite;
 }
 
 @keyframes rotate {
     to {
         transform: rotate(360deg);
+    }
+}
+@keyframes rotate2 {
+    from {
+        transform: rotate(0) scale(1);
+    }
+    50%{
+        transform: rotate(180deg) scale(1.5);
+    }
+    to{
+        transform: rotate(360deg) scale(1);
     }
 }
 

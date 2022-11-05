@@ -4,6 +4,14 @@ include "connection.php";
 $AdminID = $_POST['adminid'];
 $Password = $_POST['password'];
 
+function Login($AdminID,$Password,$name,$desig){
+    session_start();
+    $_SESSION['AdminID'] = $AdminID;
+    $_SESSION['Password'] = $Password;
+    $_SESSION['Name'] = $name;
+    $_SESSION['Desig'] = $desig;
+}
+
 $CheckerID;
 $CheckerPassword;
 
@@ -22,11 +30,7 @@ if (isset($AdminID)) {
         }
 
         if ($Password == $CheckerPassword) {
-            session_start();
-            $_SESSION['AdminID'] = $AdminID;
-            $_SESSION['Password'] = $Password;
-            $_SESSION['Name'] = $name;
-            $_SESSION['Desig'] = $desig;
+            Login($AdminID,$Password,$name,$desig);
             header("Location: ../../index.php");
         } else {
             echo "<script>alert('Password Incorrect ECODE-2');

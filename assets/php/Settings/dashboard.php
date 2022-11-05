@@ -82,7 +82,7 @@ while ($data = mysqli_fetch_assoc($result3)) {
                 <span class=" icon fa fa-dollar"></span> <span class="link">Loan</span>
             </a>
             <a href="dashboard.php" class="side-link active">
-                <span class=" icon fa fa-gear active"></span> <span class="link">Dashboard</span>
+                <span class=" icon fa fa-gear"></span> <span class="link">Dashboard</span>
             </a>
             <a href="alter.php" class="side-link">
                 <span class=" icon fa fa-gear"></span> <span class="link">Change/Track</span>

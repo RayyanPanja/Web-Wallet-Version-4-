@@ -57,9 +57,9 @@
     display: block;
     width: 30px;
     height: 5px;
-    background: purple;
+    background: var(--secondary-clr);
     z-index: 9999;
-    transition: all 1000ms;
+    transition: transform 1000ms;
 }
 .bars::before,
 .bars::after {
@@ -67,8 +67,8 @@
     position: absolute;
     width: 30px;
     height: 5px;
-    background: purple;
-    transition: all 900ms;
+    background: inherit;
+    transition: transform 900ms;
 }
 
 .bars::before {
@@ -80,7 +80,7 @@
 }
 
 .bars:hover::before {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scaleX(1.5);
 }
 
 .bars:hover::after {

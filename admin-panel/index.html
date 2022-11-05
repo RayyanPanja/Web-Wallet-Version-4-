@@ -1,59 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Wallet Admin Panel</title>
-    <!-- Icon Library -->
-    <link rel="stylesheet" href="../assets/icons/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="../assets/css/fonts.css">
-    <!-- Css -->
-    <link rel="stylesheet" href="assets/css/root.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Admin Login</title>
 </head>
-
 <body>
-    <section>
-        <dialog class="login-form" id="login-box">
-            <h1>Login</h1>
-            <form action="assets/php/login.php" method="post">
-                <div class="row">
-                    <div class="col-lab">
-                        <label for="ID">Admin ID</label>
-                    </div>
-                    <div class="col-inp">
-                        <input type="number" name="adminid" id="adminid" class="input" placeholder="ID">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lab">
-                        <label for="Password">Password</label>
-                    </div>
-                    <div class="col-inp">
-                        <input type="password" name="password" id="psw" placeholder="******" class="input">
-                    </div>
-                </div>
-                <div class="login-btn-set">
-                    <button type="reset" class="cancle  btn ">Cancle</button>
-                    <button type="submit" class="submit btn ">Login</button>
-                </div>
-            </form>
-        </dialog>
-    </section>
+    <header class="hero-sec">
+        <img src="assets/img/hero.jpg" alt="back" class="hero-img">
+        <div class="title">
+            <h1>Web Wallet Administration</h1>
+        </div>
 
-    <header class="hero-section">
-        <img src="assets/img/Hero.jpg" alt="hero-back" class="hero-img">
-        <div class="heading">
-            <h1>Web Wallet Admin Panel</h1>
-        </div>
-        <div class="login">
-            <button class="login-btn" id="login-btn">Login</button>
-        </div>
+
     </header>
-    <script src="assets/js/dialog.js"></script>
 </body>
-
 </html>
