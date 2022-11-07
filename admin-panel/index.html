@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header class="hero-sec">
         <img src="assets/img/hero.jpg" alt="back" class="hero-img">
-        <div class="title">
-            <h1>Web Wallet Administration</h1>
+        <div class="title" id="title">
+            <h1>Web Wallet</h1>
         </div>
-
-
+        <div class="login" id="login">
+            <button type="submit" class="login-btn" id="open-login">Login</button>
+        </div>
     </header>
+    <section class="hidden">
+        <dialog id="login-form" class="login-form">
+            <button id="close-login">X</button>
+            <form action="assets/php/login.php" method="post">
+                <div class="row">
+                    <div class="col-lab">
+                        Admin ID
+                    </div>
+                    <div class="col-inp">
+                        <input type="number" name="adminid" id="id" class="input" placeholder="00000">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lab">
+                       Password
+                    </div>
+                    <div class="col-inp">
+                        <input type="password" name="password" id="psw" class="input" placeholder="*****">
+                    </div>
+                </div>
+            </form>
+        </dialog>
+
+    </section>
 </body>
+<script src="assets/js/home-animate.js"></script>
+<script src="assets/js/dialog.js"></script>
+
 </html>
