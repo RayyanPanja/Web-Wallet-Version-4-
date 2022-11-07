@@ -123,6 +123,14 @@ i {
     100% {
         transform: translateY(0);
     }
-
-
+}
+.content{
+    display: flex;
+}
+.content-screen{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.content-screen h1{
+    font-size: 42px;
 }

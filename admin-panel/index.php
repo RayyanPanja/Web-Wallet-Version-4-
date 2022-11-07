@@ -1,4 +1,5 @@
 <?php
+include "assets/php/connection.php";
 session_start();
 $id = $_SESSION['AdminID'];
 $psw = $_SESSION['Password'];
@@ -38,18 +39,35 @@ $desig = $_SESSION['Desig'];
             <p><?php echo $name; ?> (<?php echo $desig; ?>)</p>
             <p></p>
         </nav>
+        <div class="content">
+            <div class="side-nav">
+                <div class="side-link-set">
+                    <a href="assets/php/Loan App/ui.php" class="side-link">Loan Application</a>
+                    <a href="assets/php/" class="side-link">Deposite Amount</a>
+                    <a href="assets/php/" class="side-link">Deduct Loan Amount</a>
+                    <a href="assets/php/" class="side-link">Review Comments</a>
+                    <a href="assets/php/" class="side-link">Remove Account</a>
+                    <a href="assets/php/" class="side-link">Details Of Account</a>
+                </div>
+            </div>
+            <div class="content-screen">
+                <?php
+                $FetchLoan = "SELECT * FROM Loan WHERE `Decision` = 'Pending';";
+                $FetchLoanResult = mysqli_query($con, $FetchLoan);
+                $LoanNumOfReq = mysqli_num_rows($FetchLoanResult);
 
-        <div class="side-nav">
-            <div class="side-link-set">
-                <a href="assets/php/" class="side-link">Loan Application</a>
-                <a href="assets/php/" class="side-link">Deposite Amount</a>
-                <a href="assets/php/" class="side-link">Deduct Loan Amount</a>
-                <a href="assets/php/" class="side-link">Review Comments</a>
-                <a href="assets/php/" class="side-link">Remove Account</a>
-                <a href="assets/php/" class="side-link">Details Of Account</a>
+                $FetchComment = "SELECT * FROM comment WHERE `Status` = 'Pending';";
+                $FetchCommentResult = mysqli_query($con, $FetchComment);
+                $CommentNumOfReq = mysqli_num_rows($FetchCommentResult);
+                ?>
+                <h1>
+                    Number Of Loan Applications to Be Reviewed : <?php echo $LoanNumOfReq; ?>
+                </h1>
+                <h1>
+                    Number Of Comments to Be Reviewed : <?php echo $CommentNumOfReq; ?>
+                </h1>
             </div>
         </div>
-
 
     </section>
 </body>
