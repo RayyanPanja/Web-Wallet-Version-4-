@@ -1,11 +1,11 @@
-<?php
-include "assets/php/connection.php";
-session_start();
-$id = $_SESSION['AdminID'];
-$psw = $_SESSION['Password'];
-$name = $_SESSION['Name'];
-$desig = $_SESSION['Desig'];
-?>
+    <?php
+    include "assets/php/connection.php";
+    session_start();
+    $id = $_SESSION['AdminID'];
+    $psw = $_SESSION['Password'];
+    $name = $_SESSION['Name'];
+    $desig = $_SESSION['Desig'];
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +55,7 @@ $desig = $_SESSION['Desig'];
                 $FetchLoan = "SELECT * FROM Loan WHERE `Decision` = 'Pending';";
                 $FetchLoanResult = mysqli_query($con, $FetchLoan);
                 $LoanNumOfReq = mysqli_num_rows($FetchLoanResult);
+                $_SESSION["loanapps"] = $LoanNumOfReq;
 
                 $FetchComment = "SELECT * FROM comment WHERE `Status` = 'Pending';";
                 $FetchCommentResult = mysqli_query($con, $FetchComment);

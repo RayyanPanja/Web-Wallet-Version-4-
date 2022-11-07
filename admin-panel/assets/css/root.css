@@ -1,5 +1,5 @@
 :root {
-    --primary-clr: #e9e9e9;
+    --primary-clr: #e9e9e9d7;
     --secondary-clr: #292929;
     --invert-clr: #fff;
     --accent-clr: #ffd700;
@@ -33,6 +33,7 @@ section {
 body {
     width: 100%;
     height: fit-content;
+    background: var(--primary-clr);
 }
 button{
     cursor: pointer;
