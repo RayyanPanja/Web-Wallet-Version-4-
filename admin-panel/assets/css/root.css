@@ -20,6 +20,44 @@ body {
     width: 100%;
     height: fit-content;
 }
-.hidden{
+
+.hidden {
     visibility: hidden;
+    position: absolute;
+}
+
+.x-btn {
+    position: absolute;
+    right: 10%;
+    font-size: 30px;
+    background: transparent;
+    font-weight: 900;
+    border: 0;
+}
+
+/* Form Elements */
+.row {
+    width: 100%;
+    padding: 3px;
+    float: left;
+}
+
+.col-lab {
+    width: 100%;
+}
+
+.col-inp {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 20px;
+    background: transparent;
+}
+
+dialog form {
+    margin-top: 10%;
 }
