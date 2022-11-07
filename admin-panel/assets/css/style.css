@@ -5,6 +5,7 @@
     height: 100vh;
     object-fit: cover;
     background: #000;
+    overflow: hidden;
 }
 .hero-img{
     position: absolute;
@@ -40,6 +41,6 @@
     transition: padding 200ms;
 }
 .hero-sec .login-btn:hover{
-    padding: 10px 50px;
-
+    padding: 15px 50px;
+    box-shadow: 0 0 15px 0 gold;
 }
