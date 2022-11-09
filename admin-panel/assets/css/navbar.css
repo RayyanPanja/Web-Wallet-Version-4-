@@ -48,3 +48,18 @@
     transform: translateX(50px);
     box-shadow: inset 0 0 20px 0 gold;
 }
+.side-link .logout-btn{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: 0;
+    padding: 10px;
+}
+.side-link:has(.logout-btn){
+    padding: unset;
+}
+.side-link:has(.logout-btn):hover{
+    box-shadow: inset 0 0 20px 0 red;
+    border: 3px solid red;
+}
