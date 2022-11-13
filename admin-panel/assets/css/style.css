@@ -25,7 +25,7 @@
     transform: translate(-50%, -50%);
     font-size: 50px;
     color: gold;
-    transition: top 1000ms;
+    transition: all 1000ms;
 }
 
 .hero-sec .login {
@@ -55,7 +55,7 @@
     width: 25%;
     height: 50vh;
     padding: 15px;
-    background: var(--primary-clr);
+    background: #efefef;
     border: 3px solid var(--accent-clr);
     box-shadow: 0 0 20px 0 var(--accent-clr);
     position: absolute;

@@ -149,7 +149,7 @@ main{
     height: 100%;
     background: var(--primary-clr);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 2px 2px 5px 0 black;
 }
 
@@ -182,13 +182,17 @@ main{
     padding: 15px;
     background-color: var(--primary-clr);
     border-radius: 5px;
-    box-shadow: 0 0 10px 0 black;
+    box-shadow: 0 0 5px 0 black;
     overflow-y: scroll;
 }
-
+.expense-card table{
+    height: 20vh;
+    margin-top: 5%;
+}
 .expense-card h1 {
-    position: sticky;
+    position: absolute;
     top: 0;
+    width: 90%;
     background-color: var(--primary-clr);
     z-index: 999;
 }

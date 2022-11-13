@@ -11,10 +11,12 @@ setTimeout(() => {
 login.addEventListener('click', () => {
     setTimeout(() => {
         login.style.left = 110 + "%";
+        title.style.top = 130 + "%";
     }, 100);
 })
 loginClose.addEventListener('click', () => {
     setTimeout(() => {
         login.style.left = 50 + "%";
+        title.style.top = 30 + "%";
     }, 100);
 })

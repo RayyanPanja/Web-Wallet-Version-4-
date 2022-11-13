@@ -1,3 +1,6 @@
+body{
+    overflow: hidden !important;
+}
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -6,15 +9,15 @@
 }
 
 .grid-2 section {
-    border: 3px solid cadetblue;
+    border: 3px solid gold;
 }
 
 .loan {
-    height: 50%;
+    height: 100%;
     overflow-y: scroll;
 }
 .package{
-    height: 50%;
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -34,7 +37,8 @@ table,
 tr,
 td,
 th {
-    border: 3px solid teal;
+    border: 3px solid gold;
+    font-weight: 700;
 }
 
 .loan td,
@@ -45,4 +49,40 @@ th {
 
 table {
     width: 100%;
+}
+.controller{
+    margin-top: 10%;
+    width: 100%;
+    height: 50vh;
+    padding: 15px;
+    border: 5px solid black;
+    background: white;
+}
+.controller .btn-set{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    gap: 20px;
+}
+.controller .btn{
+    padding: 10px 20px;
+}
+.submit{
+    background: gold;
+}
+.cancle{
+    background: silver;
+}
+.submit:hover{
+    background: goldenrod;
+}
+.back-btn{
+    position: absolute;
+    top: -25px;
+    left: 0;
+    padding: 10px 25px;
+    background: black;
+    color: gold;
 }
