@@ -127,7 +127,7 @@ $Name = $_SESSION['Name'];
         <div class="grid-3 scroll-x small-gap card-set">
             <div class="card-wrap ">
                 <div class="profile">
-                    <img src="assets/images/rayyan-2.jpg" alt="Profile">
+                    <img src="assets/images/rayyan.png" alt="Profile">
                 </div>
                 <div class="name">
                     <h3>Panja Rayyan</h3>
