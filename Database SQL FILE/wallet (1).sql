@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2022 at 11:40 AM
+-- Generation Time: Nov 16, 2022 at 06:58 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -28,12 +28,42 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `Admin_ID` int(99) NOT NULL,
-  `Admin_Name` int(90) NOT NULL,
-  `Admin_Password` int(30) NOT NULL,
+  `Admin_ID` int(90) NOT NULL,
+  `Admin_Name` varchar(90) NOT NULL,
+  `Admin_Password` varchar(30) NOT NULL,
   `Designation` varchar(100) NOT NULL,
-  `How_Much_Approved` int(99) NOT NULL DEFAULT 0
+  `How_Much_Approved` int(99) NOT NULL DEFAULT 0,
+  `Branch` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Admin_ID`, `Admin_Name`, `Admin_Password`, `Designation`, `How_Much_Approved`, `Branch`) VALUES
+(1, 'Rayyan', '7410', 'Manager', 0, 'Veraval\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `Cid` int(99) NOT NULL,
+  `Name` varchar(99) NOT NULL,
+  `Msg` longtext NOT NULL,
+  `Status` varchar(50) NOT NULL DEFAULT 'Pending',
+  `Time` time NOT NULL DEFAULT current_timestamp(),
+  `Date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`Cid`, `Name`, `Msg`, `Status`, `Time`, `Date`) VALUES
+(2, 'Rayyan', 'sdasdasdadas', 'Pending', '15:38:29', '2022-11-12');
 
 -- --------------------------------------------------------
 
@@ -63,8 +93,11 @@ CREATE TABLE `loan` (
 --
 
 INSERT INTO `loan` (`Application_ID`, `Account_number`, `Debt`, `Name`, `Address`, `Email`, `Contact`, `Loan_recovered`, `Decision`, `Decision_By`, `Date_Loan_Req`, `Package_ID`, `Package_Name`, `Package_Amount`) VALUES
-(4752359, 9786, 2500000, 'Rayyan', 'VERAVAL', '', 2147483647, 0, 'Pending', '', '2022-10-30 20:58:50', 111111, 'One Piece', 2500000),
-(9828865, 9786, 0, 'Rayyan', 'VERAVAL', '', 2147483647, 0, 'Pending', '', '2022-10-29 15:12:14', 0, '', 0);
+(2786523, 9786, 2500000, 'Rayyan', 'VERAVAL', '', 2147483647, 0, 'Approve', '', '2022-10-31 16:39:04', 111111, 'One Piece', 2500000),
+(4735541, 9786, 2500000, 'Rayyan', 'VERAVAL', '', 2147483647, 0, 'Approve', '', '2022-11-13 17:03:35', 111111, 'One Piece', 2500000),
+(4752359, 9786, 2500000, 'Rayyan', 'VERAVAL', '', 2147483647, 0, 'Approve', '', '2022-10-30 20:58:50', 111111, 'One Piece', 2500000),
+(6660732, 9786, 15452, 'Rayyan', 'VERAVAL', '', 2147483647, 0, 'Approve', '', '2022-11-04 12:37:30', 222222, '2 Piece', 15452),
+(9828865, 9786, 0, 'Rayyan', 'VERAVAL', '', 2147483647, 0, 'Approve', '', '2022-10-29 15:12:14', 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -78,7 +111,7 @@ CREATE TABLE `main` (
   `Firstname` varchar(100) NOT NULL,
   `Fathername` varchar(100) NOT NULL,
   `Password` varchar(15) NOT NULL,
-  `Amount` int(50) NOT NULL,
+  `Amount` int(99) NOT NULL,
   `City` varchar(225) NOT NULL,
   `Date Of Birth` date NOT NULL,
   `Loan_taken` varchar(10) NOT NULL,
@@ -94,8 +127,10 @@ CREATE TABLE `main` (
 --
 
 INSERT INTO `main` (`Account_number`, `Sirname`, `Firstname`, `Fathername`, `Password`, `Amount`, `City`, `Date Of Birth`, `Loan_taken`, `Loan_requested`, `Email`, `Contact`, `Has_recovery`, `Date_Created`) VALUES
-(69, 'Web', 'Wallet', 'Bank', '.....', 99943150, '', '2022-01-01', 'No', 'No', 'thisBank@bank.com', 2147483647, 'No', '2022-10-31 15:26:17'),
-(9786, 'Panja', 'Rayyan', 'Gulamhusen', '5555', 81850, '', '2004-01-27', 'No', 'No', 'illumi2701@gmail.com', 2147483647, 'No', '2022-10-31 15:20:48');
+(69, 'Web', 'Wallet', 'Bank', '.....', 99894495, '', '2022-01-01', 'No', 'No', 'thisBank@bank.com', 2147483647, 'No', '2022-10-31 15:26:17'),
+(9786, 'Panja', 'Rayyan', 'Gulamhusen', '5555', 2500000, '', '2004-01-27', 'Yes', 'Yes', 'illumi2701@gmail.com', 2147483647, 'No', '2022-10-31 15:20:48'),
+(44579, 'Some', 'One', 'Dope', '2525', 1500, '', '4655-05-06', 'No', 'No', 'nuts@this.com', 2145248185, 'No', '2022-10-31 16:27:35'),
+(72743, 'OO', 'AA', 'SDASD', '11111', 15200, '', '1422-02-05', 'No', 'No', 'this@this.com', 1234567890, 'No', '2022-11-04 00:03:30');
 
 -- --------------------------------------------------------
 
@@ -110,6 +145,13 @@ CREATE TABLE `recovery` (
   `Contact` int(12) NOT NULL,
   `Attempt` int(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `recovery`
+--
+
+INSERT INTO `recovery` (`Account_number`, `Special_Key`, `Code_Word`, `Contact`, `Attempt`) VALUES
+(9786, 2525, 'One Piece', 96017869, 0);
 
 -- --------------------------------------------------------
 
@@ -133,8 +175,8 @@ CREATE TABLE `schemes` (
 --
 
 INSERT INTO `schemes` (`Scheme_ID`, `Scheme_Name`, `Sponsor`, `Package`, `Date_Added`, `Status`, `Users_Using`, `Max_Users`) VALUES
-(111111, 'One Piece', 'JoyBoy', 2500000, '2022-10-29', 'Active', 1, 5),
-(222222, '2 Piece', '2JoyBoy', 15452, '2022-10-29', 'Active', 0, 5);
+(111111, 'One Piece', 'JoyBoy', 2500000, '2022-10-29', 'Active', 6, 5),
+(222222, '2 Piece', '2JoyBoy', 15452, '2022-10-29', 'Active', 2, 5);
 
 -- --------------------------------------------------------
 
@@ -159,8 +201,26 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`Receipt_No`, `From_Acc`, `To_Acc`, `Amount`, `Date`, `Time`, `DateTime`, `Receiver`, `Sender`) VALUES
+(48928, 69, 9786, 2500, '2022-11-04', '15:53:11', '2022-11-04 15:53:11', 'Rayyan', 'Wallet'),
 (67754, 9786, 69, 250, '2022-10-31', '16:02:59', '2022-10-31 16:02:59', 'Wallet', 'Rayyan'),
 (81692, 69, 9786, 25000, '2022-10-31', '15:46:09', '2022-10-31 15:46:09', 'Rayyan', 'Wallet'),
+(145119, 9786, 69, 400, '2022-11-13', '16:29:49', '2022-11-13 16:29:49', 'Wallet', 'Rayyan'),
+(211988, 9786, 69, 50, '2022-11-04', '15:46:09', '2022-11-04 15:46:09', 'Wallet', 'Rayyan'),
+(228595, 69, 9786, 25000, '2022-11-04', '15:47:10', '2022-11-04 15:47:10', 'Rayyan', 'Wallet'),
+(243613, 9786, 69, 420, '2022-11-05', '14:32:24', '2022-11-05 14:32:24', 'Wallet', 'Rayyan'),
+(274580, 9786, 69, 200, '2022-11-04', '00:31:47', '2022-11-04 00:31:47', 'Wallet', 'Rayyan'),
+(315315, 69, 9786, 25000, '2022-11-04', '15:47:33', '2022-11-04 15:47:33', 'Rayyan', 'Wallet'),
+(398107, 9786, 69, 420, '2022-11-04', '12:33:22', '2022-11-04 12:33:22', 'Wallet', 'Rayyan'),
+(404884, 9786, 69, 200, '2022-10-31', '16:31:38', '2022-10-31 16:31:38', 'Wallet', 'Rayyan'),
+(412041, 9786, 69, 5000, '2022-11-04', '00:11:03', '2022-11-04 00:11:03', 'Wallet', 'Rayyan'),
+(513724, 9786, 69, 420, '2022-11-04', '12:31:22', '2022-11-04 12:31:22', 'Wallet', 'Rayyan'),
+(598171, 69, 9786, 2500, '2022-11-04', '15:47:42', '2022-11-04 15:47:42', 'Rayyan', 'Wallet'),
+(600636, 69, 9786, 1000, '2022-11-04', '15:54:27', '2022-11-04 15:54:27', 'Rayyan', 'Wallet'),
+(635181, 69, 9786, 555, '2022-11-04', '15:50:19', '2022-11-04 15:50:19', 'Rayyan', 'Wallet'),
+(677043, 9786, 69, 420, '2022-11-05', '14:32:00', '2022-11-05 14:32:00', 'Wallet', 'Rayyan'),
+(709191, 69, 9786, 250, '2022-11-04', '15:52:35', '2022-11-04 15:52:35', 'Rayyan', 'Wallet'),
+(859341, 9786, 69, 200, '2022-11-04', '12:32:12', '2022-11-04 12:32:12', 'Wallet', 'Rayyan'),
+(910931, 9786, 69, 420, '2022-11-04', '15:46:26', '2022-11-04 15:46:26', 'Wallet', 'Rayyan'),
 (954322, 9786, 69, 500, '2022-10-31', '16:08:31', '2022-10-31 16:08:31', 'Wallet', 'Rayyan');
 
 --
@@ -172,6 +232,12 @@ INSERT INTO `transaction` (`Receipt_No`, `From_Acc`, `To_Acc`, `Amount`, `Date`,
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`Admin_ID`);
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`Cid`);
 
 --
 -- Indexes for table `loan`
@@ -211,7 +277,13 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `Admin_ID` int(99) NOT NULL AUTO_INCREMENT;
+  MODIFY `Admin_ID` int(90) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `Cid` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=978519;
 
 --
 -- AUTO_INCREMENT for table `loan`
@@ -229,7 +301,7 @@ ALTER TABLE `main`
 -- AUTO_INCREMENT for table `recovery`
 --
 ALTER TABLE `recovery`
-  MODIFY `Account_number` int(99) NOT NULL AUTO_INCREMENT;
+  MODIFY `Account_number` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9787;
 
 --
 -- AUTO_INCREMENT for table `schemes`
